@@ -93,6 +93,23 @@ Blabla, video..... TODO! TODO!
 
 
 
+***
+***
+***
+## Usage:
+
+- TODO!
+***
+***
+***
+
+
+
+
+
+
+
+
 
 
 
@@ -201,7 +218,6 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - HMC:
 - - - TODO!.
 - - - _TODO.py_: TODO!
-***
 ***
 ***
 ***
