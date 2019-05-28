@@ -78,7 +78,7 @@ for M in M_values:
             if (l*M + i) % 100 == 0:
                 print (l*M + i)
 
-            network = ToyNet("eva_Ensemble-MAP-SGD_1_M1024", project_dir="/root/evaluating_bdl/toyClassification").cuda()
+            network = ToyNet("eval_Ensemble-MAP-SGD_1_M1024", project_dir="/root/evaluating_bdl/toyClassification").cuda()
             network.load_state_dict(torch.load("/root/evaluating_bdl/toyClassification/training_logs/model_Ensemble-MAP-SGD_1_M1024_%d/checkpoints/model_Ensemble-MAP-SGD_1_M1024_epoch_150.pth" % (l*M + i)))
             networks.append(network)
 
