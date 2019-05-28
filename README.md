@@ -106,9 +106,42 @@ Blabla, video..... TODO! TODO!
 - [depthCompletion](#depthcompletion)
 - [segmentation](#segmentation)
 
+### toyRegression
+
+- TODO!
+***
 
 
 
+
+
+### toyClassification
+
+- TODO!
+***
+
+
+
+
+
+
+
+### depthCompletion
+
+- TODO!
+***
+
+
+
+
+
+
+
+
+### segmentation
+
+- TODO!
+***
 ***
 ***
 ***
