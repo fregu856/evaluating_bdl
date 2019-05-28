@@ -32,3 +32,9 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - - Ctrl + P + Q
 - To get back into a running image:
 - - $ sudo docker attach toyProblems_depthCompletion_GPU0
+
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
+```
