@@ -132,45 +132,46 @@ $ cd --
 $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
 ```
 
-- **Ensemble-Adam**:
-- - Ensembling by minimizing the MLE objective using Adam and random initialization.
-- - _datasets.py_: Test.
+- Ensemble-Adam:
+- - - Ensembling by minimizing the MLE objective using Adam and random initialization.
+- - - _datasets.py_: Test.
 
 - Ensemble-Adam-Fixed:
-- - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
+- - - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
 
 - Ensemble-MAP-Adam:
-- - Ensembling by minimizing the MAP objective using Adam and random initialization.
+- - - Ensembling by minimizing the MAP objective using Adam and random initialization.
 
 - Ensemble-MAP-SGD:
-- - Ensembling by minimizing the MAP objective using SGD and random initialization.
+- - - Ensembling by minimizing the MAP objective using SGD and random initialization.
 
 - Ensemble-MAP-SGDMOM:
-- - Ensembling by minimizing the MAP objective using SGDMOM and random initialization.
+- - - Ensembling by minimizing the MAP objective using SGDMOM and random initialization.
 
 - MC-Dropout-MAP-01-Adam:
-- - MC-dropout by minimizing the MAP objective using Adam, p=0.1.
+- - - MC-dropout by minimizing the MAP objective using Adam, p=0.1.
 
 - MC-Dropout-MAP-02-SGD
-- - MC-dropout by minimizing the MAP objective using SGD, p=0.2.
+- - - MC-dropout by minimizing the MAP objective using SGD, p=0.2.
 
 - MC-Dropout-MAP-02-SGDMOM:
-- - MC-dropout by minimizing the MAP objective using SGDMOM, p=0.2.
+- - - MC-dropout by minimizing the MAP objective using SGDMOM, p=0.2.
 
 - SGLD-256:
-- - 
+- - - TODO!.
 
 - SGLD-64:
-- - 
+- - - TODO!.
 
 - SGHMC-256:
-- - 
+- - - TODO!.
 
 - SGHMC-64:
-- - 
+- - - TODO!.
 
 - HMC:
-- - 
+- - - TODO!.
+- - - _TODO.py_: TODO!
 ***
 
 
