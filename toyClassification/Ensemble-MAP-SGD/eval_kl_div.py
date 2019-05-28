@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 from model import ToyNet
 
