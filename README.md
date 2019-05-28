@@ -79,7 +79,6 @@ Blabla, video..... TODO! TODO!
 - - [segmentation](#segmentation)
 - - [toyRegression](#toyregression)
 - - [toyClassification](#toyclassification)
-- - - [Ensemble-Adam](#ensemble-adam)
 
 ***
 ***
