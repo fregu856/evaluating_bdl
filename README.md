@@ -117,7 +117,12 @@ Blabla, video..... TODO! TODO!
 
 ### toyClassification
 
-- TODO!
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
+```
 ***
 
 
