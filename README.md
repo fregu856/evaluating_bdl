@@ -108,8 +108,16 @@ Blabla, video..... TODO! TODO!
 
 ### toyRegression
 
-- TODO!
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py 
+```
 ***
+
+
+
 
 
 
@@ -123,7 +131,48 @@ $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
 $ cd --
 $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
 ```
+
+- Ensemble-Adam:
+- - 
+
+- Ensemble-Adam-Fixed:
+- - 
+
+- Ensemble-MAP-Adam:
+- - 
+
+- Ensemble-MAP-SGD:
+- - 
+
+- Ensemble-MAP-SGDMOM:
+- - 
+
+- MC-Dropout-MAP-01-Adam:
+- - 
+
+- MC-Dropout-MAP-02-SGD
+- - 
+
+- MC-Dropout-MAP-02-SGDMOM:
+- - 
+
+- SGLD-256:
+- - 
+
+- SGLD-64:
+- - 
+
+- SGHMC-256:
+- - 
+
+- SGHMC-64:
+- - 
+
+- HMC:
+- - 
 ***
+
+
 
 
 
