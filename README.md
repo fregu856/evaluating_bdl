@@ -134,8 +134,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 - Ensemble-Adam:
 - - Ensembling by minimizing the MLE objective using Adam and random initialization.
-- - datasets.py:
-- - - Test.
+- - _datasets.py_: Test.
 
 - Ensemble-Adam-Fixed:
 - - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
