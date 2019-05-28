@@ -132,7 +132,7 @@ $ cd --
 $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
 ```
 
-- *Ensemble-Adam*:
+- **Ensemble-Adam**:
 - - Ensembling by minimizing the MLE objective using Adam and random initialization.
 - - _datasets.py_: Test.
 
