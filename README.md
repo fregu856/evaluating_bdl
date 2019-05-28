@@ -133,10 +133,10 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ```
 
 - Ensemble-Adam:
-- - 
+- - Test.
 
 - Ensemble-Adam-Fixed:
-- - 
+- - Test.
 
 - Ensemble-MAP-Adam:
 - - 
