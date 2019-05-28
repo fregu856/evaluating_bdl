@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 import torch
 import torch.utils.data
@@ -58,7 +59,7 @@ for i in range(num_samples):
     fc3_weight = fc3_weight_samples[i, 0, :] # (shape: (1, 10))
     fc3_bias = fc3_bias_samples[i, 0, :] # (shape: (1, ))
 
-    network = ToyNet("eval_ToyClass-HMC", project_dir="/root/bnns").cuda()
+    network = ToyNet("eval_HMC", project_dir="/root/evaluating_bdl/toyClassification").cuda()
     for name, param in network.named_parameters():
         if name == "fc1.weight":
             param.data = torch.from_numpy(fc1_weight).cuda()
@@ -102,14 +103,19 @@ for x_1_i, x_1_value in enumerate(x_values):
 with open("%s/false_prob_values.pkl" % network.model_dir, "wb") as file:
     pickle.dump(false_prob_values, file)
 
+# #####
 # with open("/root/evaluating_bdl/toyClassification/HMC/false_prob_values.pkl", "rb") as file: # (needed for python3)
 #     false_prob_values = pickle.load(file) # (shape: (60, 60))
+# x_values = np.linspace(x_min, x_max, num_points, dtype=np.float32)
+# network = ToyNet("eval_HMC", project_dir="/root/evaluating_bdl/toyClassification").cuda()
+# #####
 
 plt.figure(1)
 x_1, x_2 = np.meshgrid(x_values, x_values)
 plt.pcolormesh(x_1, x_2, false_prob_values, cmap="RdBu", vmin=0, vmax=1)
 plt.colorbar()
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.1)
+plt.savefig("%s/predictive_density.png" % network.model_dir)
 plt.savefig("%s/predictive_density.pdf" % network.model_dir, dpi=400)
 plt.close(1)
 
@@ -146,6 +152,7 @@ plt.plot(x_train_true[:, 0], x_train_true[:, 1], linestyle="None", marker="2", c
 plt.xlim([-6, 6])
 plt.ylim([-6, 6])
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.1)
+plt.savefig("%s/training_data.png" % network.model_dir)
 plt.savefig("%s/training_data.pdf" % network.model_dir, dpi=400)
 plt.close(1)
 
@@ -159,6 +166,7 @@ plt.colorbar()
 circle = plt.Circle((0,0), 2.4, color=cmap(255))
 plt.gcf().gca().add_artist(circle)
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.1)
+plt.savefig("%s/predictive_density_GT.png" % network.model_dir)
 plt.savefig("%s/predictive_density_GT.pdf" % network.model_dir, dpi=400)
 plt.close(1)
 
