@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 from model import ToyNet
 
@@ -19,7 +20,7 @@ import cv2
 
 batch_size = 32
 
-M = 1
+M = 2
 
 x_min = -6.0
 x_max = 6.0
