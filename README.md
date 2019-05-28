@@ -43,11 +43,36 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 
 
+Blabla, video..... TODO! TODO!
+
+
+
+
+
+## Index
+- [Usage](#usage)
+- [Documentation](#documentation)
 
 ***
 ***
 ***
-## toyClassification:
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+## Documentation:
 
 
 
