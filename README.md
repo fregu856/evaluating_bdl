@@ -43,6 +43,29 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+***
+***
+***
+***
+***
+***
+
 Blabla, video..... TODO! TODO!
 
 
@@ -52,6 +75,10 @@ Blabla, video..... TODO! TODO!
 ## Index
 - [Usage](#usage)
 - [Documentation](#documentation)
+- - [toyRegression](#toyregression)
+- - [toyClassification](#toyclassification)
+- - [depthCompletion](#depthcompletion)
+- - [segmentation](#segmentation)
 
 ***
 ***
@@ -73,6 +100,12 @@ Blabla, video..... TODO! TODO!
 ***
 ***
 ## Documentation:
+
+- [toyRegression](#toyregression)
+- [toyClassification](#toyclassification)
+- [depthCompletion](#depthcompletion)
+- [segmentation](#segmentation)
+
 
 
 
