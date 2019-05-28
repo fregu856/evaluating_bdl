@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 from model import ToyNet
 
@@ -19,13 +20,13 @@ import cv2
 
 batch_size = 32
 
-M = 1
+M = 4
 
 x_min = -6.0
 x_max = 6.0
 num_points = 60
 
-network = ToyNet("eval_ToyClass_MC-Dropout-MAP-02-SGD_1_M10_0", project_dir="/root/evaluating_bdl/toyClassification").cuda()
+network = ToyNet("eval_MC-Dropout-MAP-02-SGD_1_M10_0", project_dir="/root/evaluating_bdl/toyClassification").cuda()
 network.load_state_dict(torch.load("/root/evaluating_bdl/toyClassification/training_logs/model_MC-Dropout-MAP-02-SGD_1_M10_0/checkpoints/model_MC-Dropout-MAP-02-SGD_1_M10_epoch_300.pth"))
 
 M_float = float(M)
