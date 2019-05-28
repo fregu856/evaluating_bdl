@@ -133,28 +133,30 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ```
 
 - Ensemble-Adam:
-- - Test.
+- - Ensembling by minimizing the MLE objective using Adam and random initialization.
+- - datasets.py:
+- - - Test.
 
 - Ensemble-Adam-Fixed:
-- - Test.
+- - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
 
 - Ensemble-MAP-Adam:
-- - 
+- - Ensembling by minimizing the MAP objective using Adam and random initialization.
 
 - Ensemble-MAP-SGD:
-- - 
+- - Ensembling by minimizing the MAP objective using SGD and random initialization.
 
 - Ensemble-MAP-SGDMOM:
-- - 
+- - Ensembling by minimizing the MAP objective using SGDMOM and random initialization.
 
 - MC-Dropout-MAP-01-Adam:
-- - 
+- - MC-dropout by minimizing the MAP objective using Adam, p=0.1.
 
 - MC-Dropout-MAP-02-SGD
-- - 
+- - MC-dropout by minimizing the MAP objective using SGD, p=0.2.
 
 - MC-Dropout-MAP-02-SGDMOM:
-- - 
+- - MC-dropout by minimizing the MAP objective using SGDMOM, p=0.2.
 
 - SGLD-256:
 - - 
