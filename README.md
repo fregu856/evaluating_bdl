@@ -80,9 +80,6 @@ Blabla, video..... TODO! TODO!
 - - [toyRegression](#toyregression)
 - - [toyClassification](#toyclassification)
 
-***
-***
-***
 
 
 
