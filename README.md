@@ -75,10 +75,10 @@ Blabla, video..... TODO! TODO!
 ## Index
 - [Usage](#usage)
 - [Documentation](#documentation)
-- - [toyRegression](#toyregression)
-- - [toyClassification](#toyclassification)
 - - [depthCompletion](#depthcompletion)
 - - [segmentation](#segmentation)
+- - [toyRegression](#toyregression)
+- - [toyClassification](#toyclassification)
 
 ***
 ***
@@ -101,10 +101,39 @@ Blabla, video..... TODO! TODO!
 ***
 ## Documentation:
 
-- [toyRegression](#toyregression)
-- [toyClassification](#toyclassification)
 - [depthCompletion](#depthcompletion)
 - [segmentation](#segmentation)
+- [toyRegression](#toyregression)
+- [toyClassification](#toyclassification)
+
+### depthCompletion
+
+- TODO!
+***
+
+
+
+
+
+
+
+
+
+### segmentation
+
+- TODO!
+***
+
+
+
+
+
+
+
+
+
+
+
 
 ### toyRegression
 
@@ -172,31 +201,6 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - HMC:
 - - - TODO!.
 - - - _TODO.py_: TODO!
-***
-
-
-
-
-
-
-
-
-
-### depthCompletion
-
-- TODO!
-***
-
-
-
-
-
-
-
-
-### segmentation
-
-- TODO!
 ***
 ***
 ***
