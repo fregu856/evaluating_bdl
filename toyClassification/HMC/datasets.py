@@ -1,3 +1,5 @@
+# code-checked
+
 import torch
 import torch.utils.data
 import torch.nn.functional as F
@@ -15,10 +17,10 @@ class ToyDataset(torch.utils.data.Dataset):
     def __init__(self):
         self.examples = []
 
-        with open("/root/bnns/ToyClass/x.pkl", "rb") as file: # (needed for python3)
+        with open("/root/evaluating_bdl/toyClassification/x.pkl", "rb") as file: # (needed for python3)
             x = pickle.load(file) # (shape: (2000, 2))
 
-        with open("/root/bnns/ToyClass/y.pkl", "rb") as file: # (needed for python3)
+        with open("/root/evaluating_bdl/toyClassification/y.pkl", "rb") as file: # (needed for python3)
             y = pickle.load(file) #  (shape: (2000, ))
 
         x_1_train = []
@@ -46,7 +48,7 @@ class ToyDataset(torch.utils.data.Dataset):
         plt.xlabel("x_1")
         plt.xlim([-3, 3])
         plt.ylim([-3, 3])
-        plt.savefig("/root/bnns/ToyClass/HMC/training_data.png")
+        plt.savefig("/root/evaluating_bdl/toyClassification/HMC/training_data.png")
         plt.close(1)
 
         for i in range(x_train.shape[0]):
