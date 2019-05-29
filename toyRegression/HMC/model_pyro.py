@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 import pyro
 import pyro.distributions

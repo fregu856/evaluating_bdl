@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 from datasets import ToyDatasetEval # (this needs to be imported before torch, because cv2 needs to be imported before torch for some reason)
 
@@ -199,14 +200,17 @@ with open("%s/final_sigma_tot_values.pkl" % network.model_dir, "wb") as file:
     pickle.dump(final_sigma_tot_values, file)
 
 # #####
+# network = ToyNet("eval_HMC", project_dir="/root/evaluating_bdl/toyRegression").cuda()
 # with open("/root/evaluating_bdl/toyRegression/HMC/x_values.pkl", "rb") as file: # (needed for python3)
-#     x_values_HMC = pickle.load(file) # (list of 1000 elements)
-#
+#     x_values = pickle.load(file) # (list of 1000 elements)
 # with open("/root/evaluating_bdl/toyRegression/HMC/final_mean_values.pkl", "rb") as file: # (needed for python3)
-#     mean_values_HMC = pickle.load(file) # (list of 1000 elements)
-#
+#     final_mean_values = pickle.load(file) # (list of 1000 elements)
+# with open("/root/evaluating_bdl/toyRegression/HMC/final_sigma_alea_values.pkl", "rb") as file: # (needed for python3)
+#     final_sigma_alea_values = pickle.load(file) # (list of 1000 elements)
+# with open("/root/evaluating_bdl/toyRegression/HMC/final_sigma_epi_values.pkl", "rb") as file: # (needed for python3)
+#     final_sigma_epi_values = pickle.load(file) # (list of 1000 elements)
 # with open("/root/evaluating_bdl/toyRegression/HMC/final_sigma_tot_values.pkl", "rb") as file: # (needed for python3)
-#     sigma_squared_values_HMC = pickle.load(file) # (list of 1000 elements)
+#     final_sigma_tot_values = pickle.load(file) # (list of 1000 elements)
 # #####
 
 plt.figure(1)
