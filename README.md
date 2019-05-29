@@ -206,16 +206,16 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - - - MC-dropout by minimizing the MAP objective using SGDMOM, p=0.2.
 
 - SGLD-256:
-- - - TODO!.
+- - - Implementation of SGLD, trained for 256 times longer than each member of an ensemble.
 
 - SGLD-64:
-- - - TODO!.
+- - - Implementation of SGLD, trained for 64 times longer than each member of an ensemble..
 
 - SGHMC-256:
-- - - TODO!.
+- - - Implementation of SGHMC, trained for 256 times longer than each member of an ensemble.
 
 - SGHMC-64:
-- - - TODO!.
+- - - Implementation of SGHMC, trained for 64 times longer than each member of an ensemble.
 
 - HMC:
 - - - TODO!.
