@@ -38,3 +38,187 @@ $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
 $ cd --
 $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+***
+***
+***
+***
+***
+***
+
+Blabla, video..... TODO! TODO!
+
+
+
+
+
+## Index
+- [Usage](#usage)
+- [Documentation](#documentation)
+- - [depthCompletion](#depthcompletion)
+- - [segmentation](#segmentation)
+- - [toyRegression](#toyregression)
+- - [toyClassification](#toyclassification)
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+## Usage:
+
+- TODO!
+***
+***
+***
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+## Documentation:
+
+- [depthCompletion](#depthcompletion)
+- [segmentation](#segmentation)
+- [toyRegression](#toyregression)
+- [toyClassification](#toyclassification)
+
+### depthCompletion
+
+- TODO!
+***
+
+
+
+
+
+
+
+
+
+### segmentation
+
+- TODO!
+***
+
+
+
+
+
+
+
+
+
+
+
+
+### toyRegression
+
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py 
+```
+***
+
+
+
+
+
+
+
+
+### toyClassification
+
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
+```
+
+- Ensemble-Adam:
+- - Ensembling by minimizing the MLE objective using Adam and random initialization.
+- - - _datasets.py_: Definition of the training dataset.
+- - - _model.py_: Definition of the feed-forward neural network.
+- - - _train.py_: Code for training M models.
+- - - _eval.py_: Creates a plot of the obtained predicitve distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
+- - - _eval_plots.py_: Creates plots of the obtained predictive distributions for different values of M.
+- - - _eval_kl_div.py_: Computes the KL divergence between the obtained predictive distribution and the HMC "ground truth", for different values of M. 
+
+- Ensemble-Adam-Fixed:
+- - - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
+
+- Ensemble-MAP-Adam:
+- - - Ensembling by minimizing the MAP objective using Adam and random initialization.
+
+- Ensemble-MAP-SGD:
+- - - Ensembling by minimizing the MAP objective using SGD and random initialization.
+
+- Ensemble-MAP-SGDMOM:
+- - - Ensembling by minimizing the MAP objective using SGDMOM and random initialization.
+
+- MC-Dropout-MAP-01-Adam:
+- - - MC-dropout by minimizing the MAP objective using Adam, p=0.1.
+
+- MC-Dropout-MAP-02-SGD
+- - - MC-dropout by minimizing the MAP objective using SGD, p=0.2.
+
+- MC-Dropout-MAP-02-SGDMOM:
+- - - MC-dropout by minimizing the MAP objective using SGDMOM, p=0.2.
+
+- SGLD-256:
+- - - Implementation of SGLD, trained for 256 times longer than each member of an ensemble.
+
+- SGLD-64:
+- - - Implementation of SGLD, trained for 64 times longer than each member of an ensemble..
+
+- SGHMC-256:
+- - - Implementation of SGHMC, trained for 256 times longer than each member of an ensemble.
+
+- SGHMC-64:
+- - - Implementation of SGHMC, trained for 64 times longer than each member of an ensemble.
+
+- HMC:
+- - - Implementation of HMC using [Pyro](http://pyro.ai/).
+***
+***
+***
