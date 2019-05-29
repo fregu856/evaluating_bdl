@@ -176,7 +176,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ```
 
 - Ensemble-Adam:
-- - - Ensembling by minimizing the MLE objective using Adam and random initialization.
+- - Ensembling by minimizing the MLE objective using Adam and random initialization.
 - - - _datasets.py_: Definition of the training dataset.
 - - - _model.py_: Definition of the feed-forward nerual network.
 - - - _train.py_: Code for training M models.
