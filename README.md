@@ -206,7 +206,7 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - Implementation of HMC using [Pyro](http://pyro.ai/).
 
 - Deterministic:
-- - - Implementation of fully deterministic model, i.e., direct regression.
+- - - Implementation of a fully deterministic model, i.e., direct regression.
 ***
 ***
 
