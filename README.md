@@ -124,6 +124,7 @@ Blabla, video..... TODO! TODO!
 
 - TODO!
 ***
+***
 
 
 
@@ -136,6 +137,7 @@ Blabla, video..... TODO! TODO!
 ### segmentation
 
 - TODO!
+***
 ***
 
 
@@ -167,11 +169,11 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - _eval_plots.py_: Creates plots of the obtained predictive distributions for different values of M.
 - - - _eval_kl_div.py_: Computes the KL divergence between the obtained predictive distribution and the HMC "ground truth", for different values of M. 
 
-- Ensemble-Adam-Fixed:
-- - - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
-
 - Ensemble-MAP-Adam:
 - - - Ensembling by minimizing the MAP objective using Adam and random initialization.
+
+- Ensemble-MAP-Adam-Fixed:
+- - - Ensembling by minimizing the MAP objective using Adam and NO random initialization.
 
 - Ensemble-MAP-SGD:
 - - - Ensembling by minimizing the MAP objective using SGD and random initialization.
@@ -179,8 +181,8 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - Ensemble-MAP-SGDMOM:
 - - - Ensembling by minimizing the MAP objective using SGDMOM and random initialization.
 
-- MC-Dropout-MAP-01-Adam:
-- - - MC-dropout by minimizing the MAP objective using Adam, p=0.1.
+- MC-Dropout-MAP-02-Adam:
+- - - MC-dropout by minimizing the MAP objective using Adam, p=0.2.
 
 - MC-Dropout-MAP-02-SGD
 - - - MC-dropout by minimizing the MAP objective using SGD, p=0.2.
@@ -204,7 +206,8 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - Implementation of HMC using [Pyro](http://pyro.ai/).
 
 - Deterministic:
-- - - TODO! TODO!
+- - - Implementation of fully deterministic model, i.e., direct regression.
+***
 ***
 
 
