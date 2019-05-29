@@ -177,7 +177,12 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 - Ensemble-Adam:
 - - - Ensembling by minimizing the MLE objective using Adam and random initialization.
-- - - _datasets.py_: Test.
+- - - _datasets.py_: Definition of the training dataset.
+- - - _model.py_: Definition of the feed-forward nerual network.
+- - - _train.py_: Code for training M models.
+- - - _eval.py_: Creates plots of the obtained predicitve distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
+- - - _eval_plots.py_: Test.
+- - - _eval_kl_div.py_: Test.
 
 - Ensemble-Adam-Fixed:
 - - - Ensembling by minimizing the MLE objective using Adam and NO random initialization.
