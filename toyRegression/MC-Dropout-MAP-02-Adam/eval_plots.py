@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 from datasets import ToyDatasetEval # (this needs to be imported before torch, because cv2 needs to be imported before torch for some reason)
 from model import ToyNet
@@ -24,9 +25,9 @@ for M in M_values:
     for iter in range(6):
 
         network = ToyNet("eval_MC-Dropout-MAP-02-Adam_1_M10", project_dir="/root/evaluating_bdl/toyRegression").cuda()
-        network.load_state_dict(torch.load("/root/evaluating_bdl/toyRegression/training_logs/model_MC-Dropout-MAP-02-Adam_1_M10_%d/checkpoints/model_MC-Dropout-MAP-02-Adam_1_M10_epoch_300.pth" % i))
+        network.load_state_dict(torch.load("/root/evaluating_bdl/toyRegression/training_logs/model_MC-Dropout-MAP-02-Adam_1_M10_%d/checkpoints/model_MC-Dropout-MAP-02-Adam_1_M10_epoch_300.pth" % iter))
 
-        M_float = float(len(networks))
+        M_float = float(M)
         print (M_float)
 
         val_dataset = ToyDatasetEval()
