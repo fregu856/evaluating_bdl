@@ -218,7 +218,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - - - Implementation of SGHMC, trained for 64 times longer than each member of an ensemble.
 
 - HMC:
-- - - TODO!.
+- - Implementation of HMC using [Pyro](http://pyro.ai/).
 - - - _TODO.py_: TODO!
 ***
 ***
