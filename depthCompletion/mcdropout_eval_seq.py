@@ -20,7 +20,7 @@ import cv2
 model_id = "mcdropout_virtual_0"
 M = 8
 
-snapshot_dir = "/root/evaluating_bdl/depthCompletion/training_logs/%s_eval_seq" % model_id
+snapshot_dir = "/root/evaluating_bdl/depthCompletion/training_logs/%s_M%d_eval_seq" % (model_id, M)
 
 kitti_depth_path = "/root/data/kitti_depth"
 kitti_raw_path = "/root/data/kitti_raw"
