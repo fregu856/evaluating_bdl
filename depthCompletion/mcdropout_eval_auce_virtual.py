@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 import os
 
@@ -53,6 +54,11 @@ print (num_model_is)
 
 M_values = [1, 2, 4, 8, 16, 32]
 print (M_values)
+
+# # # # # # # # # # # # # # # # # # debug START:
+# M_values = [1, 2, 4]
+# model_is = [0, 1]
+# # # # # # # # # # # # # # # # # # debug END:
 
 num_runs_per_M = 1
 
@@ -176,8 +182,10 @@ for model_i in model_is:
                     mean_values = np.concatenate((mean_values, mean.data.cpu().numpy()))
                     target_values = np.concatenate((target_values, target.data.cpu().numpy()))
 
+                    # # # # # # # # # # # # # # # # # # debug START:
                     # if i_iter > 0:
                     #     break
+                    # # # # # # # # # # # # # # # # # # debug END:
 
             val_loss = np.mean(batch_losses)
             print ("val loss: %g" % val_loss)

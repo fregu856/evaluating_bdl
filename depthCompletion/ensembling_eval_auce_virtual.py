@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 import os
 
@@ -58,6 +59,16 @@ num_runs_per_M[4] = 16
 num_runs_per_M[8] = 16
 num_runs_per_M[16] = 16
 num_runs_per_M[32] = 4
+
+# # # # # # # # # # # # # # # # # # debug START:
+# M_values = [1, 2, 4]
+# num_runs_per_M[1] = 2
+# num_runs_per_M[2] = 2
+# num_runs_per_M[4] = 2
+# num_runs_per_M[8] = 2
+# num_runs_per_M[16] = 2
+# num_runs_per_M[32] = 2
+# # # # # # # # # # # # # # # # # # debug END
 
 coverage_values = {}
 avg_length_values = {}
@@ -189,8 +200,10 @@ for M_step, M in enumerate(M_values):
                 mean_values = np.concatenate((mean_values, mean.data.cpu().numpy()))
                 target_values = np.concatenate((target_values, target.data.cpu().numpy()))
 
+                # # # # # # # # # # # # # # # # # # debug START:
                 # if i_iter > 0:
                 #     break
+                # # # # # # # # # # # # # # # # # # debug END:
 
         val_loss = np.mean(batch_losses)
         print ("val loss: %g" % val_loss)

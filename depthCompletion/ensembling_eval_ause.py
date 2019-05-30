@@ -1,4 +1,5 @@
 # code-checked
+# server-checked
 
 import os
 
@@ -97,6 +98,16 @@ num_runs_per_M[4] = 16
 num_runs_per_M[8] = 16
 num_runs_per_M[16] = 16
 num_runs_per_M[32] = 4
+
+# # # # # # # # # # # # # # # # # # debug START:
+# M_values = [1, 2, 4]
+# num_runs_per_M[1] = 2
+# num_runs_per_M[2] = 2
+# num_runs_per_M[4] = 2
+# num_runs_per_M[8] = 2
+# num_runs_per_M[16] = 2
+# num_runs_per_M[32] = 2
+# # # # # # # # # # # # # # # # # # debug END:
 
 sparsification_error_values = {}
 error_rmse_values = {}
@@ -220,8 +231,10 @@ for M_step, M in enumerate(M_values):
                 sigma_pred_values = np.concatenate((sigma_pred_values, sigma_pred.data.cpu().numpy()))
                 squared_error_values = np.concatenate((squared_error_values, squared_error.data.cpu().numpy()))
 
+                # # # # # # # # # # # # # # # # # # debug START:
                 # if i_iter > 0:
                 #     break
+                # # # # # # # # # # # # # # # # # # debug END:
 
         val_loss = np.mean(batch_losses)
         print ("val loss: %g" % val_loss)
