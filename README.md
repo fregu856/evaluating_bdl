@@ -143,7 +143,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 - _ensembling_eval_virtual.py_: As above, but on virtualKITTI val.
 
-- _ensembling_eval_auce.py_: Computes AUCE (mean +- std) on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates and stores calibration plots.
+- _ensembling_eval_auce.py_: Computes the AUCE (mean +- std) for M in [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates and stores calibration plots.
 
 - _ensembling_eval_auce_virtual.py_: TODO!
 
