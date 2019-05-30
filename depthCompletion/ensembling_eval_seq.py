@@ -1,5 +1,5 @@
 # code-checked
-# sever-checked
+# server-checked
 
 import os
 
