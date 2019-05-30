@@ -141,10 +141,10 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _ensembling_eval.py_: Computes the loss and RMSE for a trained ensemble, on KITTI val. Also creates visualization images of the input data, ground truth, prediction and the estimated uncertainty. 
 - _ensembling_eval_virtual.py_: As above, but on virtualKITTI val.
 
-- _ensembling_eval_auce.py_: Computes the AUCE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 trained ensemble models. Also creates calibration plots.
+- _ensembling_eval_auce.py_: Computes the AUCE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 trained ensemble members. Also creates calibration plots.
 - _ensembling_eval_auce_virtual.py_: As above, but on virtualKITTI val.
 
-- _ensembling_eval_ause.py_: Computes the AUSE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 trained ensemble models. Also creates sparsification plots and sparsification error curves.
+- _ensembling_eval_ause.py_: Computes the AUSE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 trained ensemble members. Also creates sparsification plots and sparsification error curves.
 - _ensembling_eval_ause_virtual.py_: As above, but on virtualKITTI val.
 
 - _ensembling_eval_seq.py_: Creates visualization videos (input data, ground truth, prediction and the estimated uncertainty) for a trained ensemble, on all sequences in KITTI val.
