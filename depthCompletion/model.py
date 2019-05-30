@@ -53,6 +53,8 @@ def convt_bn_relu(in_channels, out_channels, kernel_size, stride=1, padding=0, o
 class DepthCompletionNet(nn.Module):
     def __init__(self, pretrained=False):
         super(DepthCompletionNet, self).__init__()
+        print ("model.py")
+
         self.layers = 34
         self.pretrained = pretrained
 

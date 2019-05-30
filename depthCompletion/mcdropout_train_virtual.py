@@ -9,7 +9,7 @@ import torch.optim
 import torch.utils.data
 from torch.autograd import Variable
 
-from model import DepthCompletionNet
+from model_mcdropout import DepthCompletionNet
 
 from datasets import DatasetVirtualKITTIAugmentation, DatasetVirtualKITTIVal
 from criterion import MaskedL2Gauss, RMSE
@@ -21,7 +21,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-model_id = "ensembling_virtual"
+model_id = "mcdropout_virtual"
 
 snapshot_dir_base = "/root/evaluating_bdl/depthCompletion/training_logs/%s" % model_id
 
@@ -35,7 +35,7 @@ val_batch_size = 4
 
 save_pred_every = 1000
 
-M = 32
+M = 16
 for i in range(M):
     learning_rate = 1.0e-5
 
