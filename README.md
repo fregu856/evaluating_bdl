@@ -151,16 +151,20 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _ensembling_eval_seq_virtual.py_: As above, but on all sequences in virtualKITTI val.
 - %
 
-- _mcdropout_train.py_: TODO!
-- _mcdropout_train_virtual.py_: TODO!
+- _mcdropout_train.py_: Code for training M _model_mcdropout.py_ models, on KITTI train.
+- _mcdropout_train_virtual.py_: As above, but on virtualKITTI train.
+
 - _mcdropout_eval.py_: TODO!
-- _mcdropout_eval_virtual.py_: TODO!
+- _mcdropout_eval_virtual.py_:  As above, but on virtualKITTI val.
+
 - _mcdropout_eval_auce.py_: TODO!
-- _mcdropout_eval_auce_virtual.py_: TODO!
+- _mcdropout_eval_auce_virtual.py_: As above, but on virtualKITTI val.
+
 - _mcdropout_eval_ause.py_: TODO!
-- _mcdropout_eval_ause_virtual.py_: TODO!
+- _mcdropout_eval_ause_virtual.py_: As above, but on virtualKITTI val.
+
 - _mcdropout_eval_seq.py_: TODO!
-- _mcdropout_eval_seq_virtual.py_: TODO!
+- _mcdropout_eval_seq_virtual.py_: As above, but on all sequences in virtualKITTI val.
 ***
 ***
 
