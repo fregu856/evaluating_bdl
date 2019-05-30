@@ -133,7 +133,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _datasets.py_: Definitions of datasets, for KITTI depth completion (KITTI) and virtualKITTI.
 - _model.py_: Definition of the CNN.
 - _model_mcdropout.py_: Definition of the CNN, with inserted dropout layers.
-- #####
+- %%%
 
 - _ensembling_train.py_: Code for training M=33 models, on KITTI train.
 - _ensembling_train_virtual.py_: As above, but on virtualKITTI train.
