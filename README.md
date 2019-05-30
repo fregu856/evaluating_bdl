@@ -141,10 +141,10 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _ensembling_eval.py_: Computes the loss and RMSE for a trained ensemble, on KITTI val. Also creates visualization images of the input data, ground truth, prediction and the estimated uncertainty. 
 - _ensembling_eval_virtual.py_: As above, but on virtualKITTI val.
 
-- _ensembling_eval_auce.py_: Computes the AUCE (mean +- std) for M in [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates calibration plots.
+- _ensembling_eval_auce.py_: Computes the AUCE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates calibration plots.
 - _ensembling_eval_auce_virtual.py_: As above, but on virtualKITTI val.
 
-- _ensembling_eval_ause.py_: Computes the AUSE (mean +- std) for M in [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates sparsification plots and sparsification error curves.
+- _ensembling_eval_ause.py_: Computes the AUSE (mean +- std) for M = [1, 2, 4, 8, 16, 32] on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates sparsification plots and sparsification error curves.
 - _ensembling_eval_ause_virtual.py_: As above, but on virtualKITTI val.
 
 - _ensembling_eval_seq.py_: Creates visualization videos (input data, ground truth, prediction and the estimated uncertainty) for a trained ensemble, on all sequences in KITTI val.
@@ -154,16 +154,16 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _mcdropout_train.py_: Code for training M _model_mcdropout.py_ models, on KITTI train.
 - _mcdropout_train_virtual.py_: As above, but on virtualKITTI train.
 
-- _mcdropout_eval.py_: TODO!
+- _mcdropout_eval.py_: Computes the loss and RMSE for a trained MC-dropout model with M forward passes, on KITTI val. Also creates visualization images of the input data, ground truth, prediction and the estimated uncertainty. 
 - _mcdropout_eval_virtual.py_:  As above, but on virtualKITTI val.
 
-- _mcdropout_eval_auce.py_: TODO!
+- _mcdropout_eval_auce.py_: Computes the AUCE (mean +- std) for M = [1, 2, 4, 8, 16, 32] forward passes on KITTI val, based on a total of 16 models trained on virtualKITTI train. Also creates calibration plots.
 - _mcdropout_eval_auce_virtual.py_: As above, but on virtualKITTI val.
 
-- _mcdropout_eval_ause.py_: TODO!
+- _mcdropout_eval_ause.py_: Computes the AUSE (mean +- std) for M = [1, 2, 4, 8, 16, 32] forward passes on KITTI val, based on a total of 16 models trained on virtualKITTI train. Also creates sparsification plots and sparsification error curves.
 - _mcdropout_eval_ause_virtual.py_: As above, but on virtualKITTI val.
 
-- _mcdropout_eval_seq.py_: TODO!
+- _mcdropout_eval_seq.py_: Creates visualization videos (input data, ground truth, prediction and the estimated uncertainty) for a trained MC-dropout model with M forward passes, on all sequences in KITTI val.
 - _mcdropout_eval_seq_virtual.py_: As above, but on all sequences in virtualKITTI val.
 ***
 ***
