@@ -49,10 +49,10 @@ class DatasetKITTIAugmentation(data.Dataset):
                 example["file_id"] = groundtruth_dir_path_03 + "/" + file_id
                 self.examples.append(example)
 
-        print (len(self.examples))
+        print ("DatasetKITTIAugmentation - num unique examples: %d" % len(self.examples))
         if max_iters is not None:
             self.examples = self.examples*int(np.ceil(float(max_iters)/len(self.examples)))
-        print (len(self.examples))
+        print ("DatasetKITTIAugmentation - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
@@ -219,7 +219,7 @@ class DatasetKITTIVal(data.Dataset):
             example["file_id"] = img_id
             self.examples.append(example)
 
-        print(len(self.examples))
+        print ("DatasetKITTIVal - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
@@ -308,7 +308,7 @@ class DatasetKITTIValSeq(data.Dataset):
             example["file_id"] = id
             self.examples.append(example)
 
-        print(len(self.examples))
+        print ("DatasetKITTIValSeq - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
@@ -433,10 +433,10 @@ class DatasetVirtualKITTIAugmentation(data.Dataset):
                     example["file_id"] = file_id
                     self.examples.append(example)
 
-        print (len(self.examples))
+        print ("DatasetVirtualKITTIAugmentation - num unique examples: %d" % len(self.examples))
         if max_iters is not None:
             self.examples = self.examples*int(np.ceil(float(max_iters)/len(self.examples)))
-        print (len(self.examples))
+        print ("DatasetVirtualKITTIAugmentation - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
@@ -610,7 +610,7 @@ class DatasetVirtualKITTIVal(data.Dataset):
                     example["file_id"] = file_id
                     self.examples.append(example)
 
-        print (len(self.examples))
+        print ("DatasetVirtualKITTIVal - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
@@ -743,7 +743,7 @@ class DatasetVirtualKITTIValSeq(data.Dataset):
             example["file_id"] = file_id
             self.examples.append(example)
 
-        print (len(self.examples))
+        print ("DatasetVirtualKITTIValSeq - num examples: %d" % len(self.examples))
 
     def __len__(self):
         return len(self.examples)
