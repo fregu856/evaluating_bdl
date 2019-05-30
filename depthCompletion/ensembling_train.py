@@ -36,7 +36,7 @@ val_batch_size = 4
 
 save_pred_every = 1000
 
-M = 32
+M = 33
 for i in range(M):
     learning_rate = 1.0e-5
 
