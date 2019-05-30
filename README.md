@@ -129,8 +129,8 @@ $ cd --
 $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 ```
 
-- - _criterion.py_: TODO!
-- - _datasets.py_: TODO!
+- _criterion.py_: TODO!
+- _datasets.py_: TODO!
 - _model.py_: TODO!
 - _model_mcdropout.py_: TODO!
 
