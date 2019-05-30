@@ -129,8 +129,32 @@ $ cd --
 $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 ```
 
-- criterion.py: TODO!
-- datasets.py: TODO!
+- _criterion.py_: TODO!
+- _datasets.py_: TODO!
+- _model.py_: TODO!
+- _model_mcdropout.py_: TODO!
+
+- _ensembling_train.py_: TODO!
+- _ensembling_train_virtual.py_: TODO!
+- _ensembling_eval.py_: TODO!
+- _ensembling_eval_virtual.py_: TODO!
+- _ensembling_eval_auce.py_: TODO!
+- _ensembling_eval_auce_virtual.py_: TODO!
+- _ensembling_eval_ause.py_: TODO!
+- _ensembling_eval_ause_virtual.py_: TODO!
+- _ensembling_eval_seq.py_: TODO!
+- _ensembling_eval_seq_virtual.py_: TODO!
+
+- _mcdropout_train.py_: TODO!
+- _mcdropout_train_virtual.py_: TODO!
+- _mcdropout_eval.py_: TODO!
+- _mcdropout_eval_virtual.py_: TODO!
+- _mcdropout_eval_auce.py_: TODO!
+- _mcdropout_eval_auce_virtual.py_: TODO!
+- _mcdropout_eval_ause.py_: TODO!
+- _mcdropout_eval_ause_virtual.py_: TODO!
+- _mcdropout_eval_seq.py_: TODO!
+- _mcdropout_eval_seq_virtual.py_: TODO!
 ***
 ***
 
