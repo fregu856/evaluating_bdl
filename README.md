@@ -134,16 +134,27 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _model.py_: Definition of the CNN.
 - _model_mcdropout.py_: Definition of the CNN, with inserted dropout layers.
 
+
 - _ensembling_train.py_: Code for training M models, on KITTI train.
+
 - _ensembling_train_virtual.py_: As above, but on virtualKITTI train.
-- _ensembling_eval.py_: Computes the loss and RMSE for a trained ensemble, on KITTI val. Also creates visualization images of the input data, ground truth, prediction and the estimated uncertainty.  
+
+- _ensembling_eval.py_: Computes the loss and RMSE for a trained ensemble, on KITTI val. Also creates and stores visualization images of the input data, ground truth, prediction and the estimated uncertainty. 
+
 - _ensembling_eval_virtual.py_: As above, but on virtualKITTI val.
-- _ensembling_eval_auce.py_: TODO!
+
+- _ensembling_eval_auce.py_: Computes AUCE (mean +- std) on KITTI val, based on a total of 33 ensemble members trained on virtualKITTI train. Also creates and stores calibration plots.
+
 - _ensembling_eval_auce_virtual.py_: TODO!
+
 - _ensembling_eval_ause.py_: TODO!
+
 - _ensembling_eval_ause_virtual.py_: TODO!
+
 - _ensembling_eval_seq.py_: TODO!
+
 - _ensembling_eval_seq_virtual.py_: TODO!
+
 
 - _mcdropout_train.py_: TODO!
 - _mcdropout_train_virtual.py_: TODO!
