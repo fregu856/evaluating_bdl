@@ -4,8 +4,6 @@ import os
 
 import torch
 import torch.nn.parallel
-import torch.backends.cudnn as cudnn
-cudnn.benchmark = True
 import torch.optim
 import torch.utils.data
 from torch.autograd import Variable

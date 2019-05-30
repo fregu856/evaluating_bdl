@@ -113,7 +113,7 @@ for M_step, M in enumerate(M_values):
 
         models = []
         for i in model_is:
-            restore_from = "/root/evaluating_bdl/depthCompletion/trained_models/%s_%d/checkpoint_40000.pth" % (model_id, i) ##%%%%%%%%%%%%%%%%%%%%%%%%%
+            restore_from = "/root/evaluating_bdl/depthCompletion/trained_models/%s_%d/checkpoint_40000.pth" % (model_id, i)
             model = DepthCompletionNet().cuda()
             model = torch.nn.DataParallel(model)
             model.load_state_dict(torch.load(restore_from))

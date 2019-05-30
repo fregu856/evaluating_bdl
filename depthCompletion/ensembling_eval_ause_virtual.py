@@ -4,8 +4,6 @@ import os
 
 import torch
 import torch.nn.parallel
-import torch.backends.cudnn as cudnn
-cudnn.benchmark = True
 import torch.optim
 import torch.utils.data
 from torch.autograd import Variable
@@ -222,7 +220,7 @@ for M_step, M in enumerate(M_values):
                 sigma_pred_values = np.concatenate((sigma_pred_values, sigma_pred.data.cpu().numpy()))
                 squared_error_values = np.concatenate((squared_error_values, squared_error.data.cpu().numpy()))
 
-                # if i_iter > 5:
+                # if i_iter > 0:
                 #     break
 
         val_loss = np.mean(batch_losses)
@@ -387,7 +385,7 @@ for M in M_values:
     plt.figure(1)
     for run in range(num_runs_per_M[M]):
         plt.plot(fractions, error_rmse_values[M][run], color=run_colors[run], linestyle="dotted")
-        plt.plot(fractions, sigma_rmse_values[M][run], color=run_colors[run]) 
+        plt.plot(fractions, sigma_rmse_values[M][run], color=run_colors[run])
     plt.ylabel("RMSE (normalized)")
     plt.xlabel("Fraction of removed pixels")
     plt.ylim((-0.05, 1.05))
