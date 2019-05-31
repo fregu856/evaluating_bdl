@@ -226,7 +226,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _mcdropout_eval_seq_virtual.py_: As above, but on all sequences in virtualKITTI val.
 ***
 ***
-
+***
 
 
 
@@ -272,13 +272,13 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 - _mcdropout_eval_syn.py_: FIXA!
 
 - _mcdropout_eval_ause_ece.py_: (\)
-- _mcdropout_eval_ause_ece_syn.py_: (\ 
+- _mcdropout_eval_ause_ece_syn.py_: (\) 
 
 - _mcdropout_eval_seq.py_: FIXA!
 - _mcdropout_eval_seq_syn.py_: FIXA!
 ***
 ***
-
+***
 
 
 
@@ -348,7 +348,7 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - Implementation of a fully deterministic model, i.e., direct regression.
 ***
 ***
-
+***
 
 
 
