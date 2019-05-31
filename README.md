@@ -244,7 +244,38 @@ $ cd home
 $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
 ```
 
-- TODO!
+- _criterion.py_: (\)
+- _datasets.py_: Sla ihop grejer och skapa denna?
+- _model.py_: FIXA!
+- _model_mcdropout.py_: FIXA!
+- %%%%%
+
+
+- _ensembling_train.py_: (\)
+- _ensembling_train_syn.py_: (\) 
+
+- _ensembling_eval.py_: (/)
+- _ensembling_eval_syn.py_: (/) 
+
+- _ensembling_eval_ause_ece.py_: (\) 
+- _ensembling_eval_ause_ece_syn.py_: (\)
+
+- _ensembling_eval_seq.py_: FIXA!
+- _ensembling_eval_seq_syn.py_: FIXA!  
+- %%%%%
+
+
+- _mcdropout_train.py_: (\) 
+- _mcdropout_train_syn.py_: (\) 
+
+- _mcdropout_eval.py_: FIXA!
+- _mcdropout_eval_syn.py_: FIXA!
+
+- _mcdropout_eval_ause_ece.py_: (\)
+- _mcdropout_eval_ause_ece_syn.py_: (\ 
+
+- _mcdropout_eval_seq.py_: FIXA!
+- _mcdropout_eval_seq_syn.py_: FIXA!
 ***
 ***
 
