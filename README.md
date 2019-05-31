@@ -122,7 +122,7 @@ Blabla, video..... TODO! TODO!
 
 ## Acknowledgements
 
-- The depthCompletion code is based on the implementation by @fangchangma 
+- The depthCompletion code is based on the implementation by [@fangchangma](https://github.com/fangchangma)
 
 
 
