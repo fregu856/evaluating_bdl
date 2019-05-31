@@ -120,6 +120,12 @@ Blabla, video..... TODO! TODO!
 
 
 
+## Acknowledgements
+
+- The depthCompletion code is based on the implementation by @fangchangma 
+
+
+
 
 
 ## Index
