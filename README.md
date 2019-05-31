@@ -43,9 +43,59 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 
 
+***
+***
+***
+***
+***
+***
+***
+***
+***
 
 
 
+
+
+
+- My username on the server is "fregu482", i.e., my home folder is "/home/fregu482".
+
+- $ sudo docker pull fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- Create start_docker_image_segmentation.sh containing:
+```      
+#!/bin/bash
+
+# DEFAULT VALUES
+GPUIDS="0,1"
+NAME="segmentation_GPU"
+
+NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
+        -p 5900:5900 \
+        --name "$NAME""01" \
+        -v /home/fregu482:/home/ \
+        fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
+```
+- (Inside the image, /home/ will now be mapped to /home/fregu482, i.e., $ cd home takes you to the regular home folder.)
+
+- (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
+
+- To start the image:
+- - $ sudo sh start_docker_image_segmentation.sh
+- To commit changes to the image:
+- - Open a new terminal window.
+- - $ sudo docker commit segmentation_GPU01 fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- To stop the image when it’s running:
+- - $ sudo docker stop segmentation_GPU01
+- To exit the image without killing running code:
+- - Ctrl + P + Q
+- To get back into a running image:
+- - $ sudo docker attach segmentation_GPU01
+
+```
+$ sudo sh start_docker_image_segmentation.sh
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
+```
 
 
 
@@ -67,6 +117,13 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ***
 
 Blabla, video..... TODO! TODO!
+
+
+
+## Acknowledgements
+
+- The depthCompletion code is based on the implementation by [@fangchangma](https://github.com/fangchangma) found [here](https://github.com/fangchangma/self-supervised-depth-completion).
+- The segmentation code is based on the implementation by [@PkuRainBow](https://github.com/PkuRainBow) found [here](https://github.com/PkuRainBow/OCNet.pytorch).
 
 
 
@@ -169,6 +226,13 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - _mcdropout_eval_seq_virtual.py_: As above, but on all sequences in virtualKITTI val.
 ***
 ***
+***
+
+
+
+
+
+
 
 
 
@@ -180,9 +244,53 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### segmentation
 
-- TODO!
+- Example usage:
+```
+$ sudo sh start_docker_image_segmentation.sh
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
+```
+
+- _criterion.py_: (x)
+- _datasets.py_: Sla ihop grejer och skapa denna?
+- _model.py_: (x)
+- _model_mcdropout.py_: (x)
+- %%%%%
+
+
+- _ensembling_train.py_: (x)
+- _ensembling_train_syn.py_: (x) 
+
+- _ensembling_eval.py_: (x)
+- _ensembling_eval_syn.py_: (x) 
+
+- _ensembling_eval_ause_ece.py_: (x) 
+- _ensembling_eval_ause_ece_syn.py_: (x)
+
+- _ensembling_eval_seq.py_: FIXA!
+- _ensembling_eval_seq_syn.py_: FIXA!  
+- %%%%%
+
+
+- _mcdropout_train.py_: (x) 
+- _mcdropout_train_syn.py_: (x) 
+
+- _mcdropout_eval.py_: FIXA!
+- _mcdropout_eval_syn.py_: FIXA!
+
+- _mcdropout_eval_ause_ece.py_: (x)
+- _mcdropout_eval_ause_ece_syn.py_: (x) 
+
+- _mcdropout_eval_seq.py_: FIXA!
+- _mcdropout_eval_seq_syn.py_: FIXA!
 ***
 ***
+***
+
+
+
+
+
 
 
 
@@ -253,6 +361,17 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - Implementation of a fully deterministic model, i.e., direct regression.
 ***
 ***
+***
+
+
+
+
+
+
+
+
+
+
 
 
 
