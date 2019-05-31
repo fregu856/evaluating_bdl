@@ -75,7 +75,7 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
         -v /home/fregu482:/home/ \
         fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
 ```
-- (Inside the image, /root/ will now be mapped to /home/fregu482, i.e., $ cd -- takes you to the regular home folder.)????????????
+- (Inside the image, /home/ will now be mapped to /home/fregu482, i.e., $ cd home takes you to the regular home folder.)
 
 - (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
 
@@ -93,8 +93,8 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 
 ```
 $ sudo sh start_docker_image_segmentation.sh
-$ cd --???????????????????????
-$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py???????????????????
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
 ```
 
 
