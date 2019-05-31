@@ -253,8 +253,8 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 
 - _criterion.py_: (x)
 - _datasets.py_: Sla ihop grejer och skapa denna?
-- _model.py_: FIXA!
-- _model_mcdropout.py_: FIXA!
+- _model.py_: (x)
+- _model_mcdropout.py_: (x)
 - %%%%%
 
 
