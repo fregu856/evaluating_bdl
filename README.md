@@ -230,6 +230,13 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### segmentation
 
+- Example usage:
+```
+$ sudo sh start_docker_image_segmentation.sh
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
+```
+
 - TODO!
 ***
 ***
