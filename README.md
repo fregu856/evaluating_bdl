@@ -275,8 +275,8 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 - _mcdropout_train.py_: (x) 
 - _mcdropout_train_syn.py_: (x) 
 
-- _mcdropout_eval.py_: FIXA!
-- _mcdropout_eval_syn.py_: FIXA!
+- _mcdropout_eval.py_: (x)
+- _mcdropout_eval_syn.py_: (x)
 
 - _mcdropout_eval_ause_ece.py_: (x)
 - _mcdropout_eval_ause_ece_syn.py_: (x) 
