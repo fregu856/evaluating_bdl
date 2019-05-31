@@ -123,6 +123,7 @@ Blabla, video..... TODO! TODO!
 ## Acknowledgements
 
 - The depthCompletion code is based on the implementation by [@fangchangma](https://github.com/fangchangma) found [here](https://github.com/fangchangma/self-supervised-depth-completion).
+- The segmentation code is based on the implementation by [@PkuRainBow](https://github.com/PkuRainBow) found [here](https://github.com/PkuRainBow/OCNet.pytorch).
 
 
 
