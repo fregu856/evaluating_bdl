@@ -43,9 +43,59 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 
 
+***
+***
+***
+***
+***
+***
+***
+***
+***
 
 
 
+
+
+
+- My username on the server is "fregu482", i.e., my home folder is "/home/fregu482".
+
+- $ sudo docker pull fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- Create start_docker_image_segmentation.sh containing:
+```      
+#!/bin/bash
+
+# DEFAULT VALUES
+GPUIDS="0,1"
+NAME="segmentation_GPU"
+
+NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
+        -p 5900:5900 \
+        --name "$NAME""01" \
+        -v /home/fregu482:/home/ \
+        fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
+```
+- (Inside the image, /root/ will now be mapped to /home/fregu482, i.e., $ cd -- takes you to the regular home folder.)????????????
+
+- (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
+
+- To start the image:
+- - $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+- To commit changes to the image:
+- - Open a new terminal window.
+- - $ sudo docker commit toyProblems_depthCompletion_GPU0 fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl
+- To stop the image when it’s running:
+- - $ sudo docker stop toyProblems_depthCompletion_GPU0
+- To exit the image without killing running code:
+- - Ctrl + P + Q
+- To get back into a running image:
+- - $ sudo docker attach toyProblems_depthCompletion_GPU0
+
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
+```
 
 
 
