@@ -297,7 +297,7 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 - _ensembling_eval_ause_ece_syn.py_: As above, but on Synscapes val.
 
 - _ensembling_eval_seq.py_: Creates visualization videos (input image, prediction and the estimated uncertainty) for a trained ensemble, on the three demo sequences in Cityscapes.
-- _ensembling_eval_seq_syn.py_: Creates a visualization video (input image, ground truth, prediction and the estimated uncertainty) for a trained ensemble, based on the 30 first images in Synscapes val.  
+- _ensembling_eval_seq_syn.py_: Creates a visualization video (input image, ground truth, prediction and the estimated uncertainty) for a trained ensemble, showing the 30 first images in Synscapes val.  
 - %%%%%
 
 
