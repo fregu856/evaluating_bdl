@@ -133,15 +133,16 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 ```
 - (Inside the image, _/root/_ will now be mapped to _/home/fregu482_, i.e., $ cd -- takes you to the regular home folder)
 - (To create more containers, change the lines _GPUIDS="0"_, _--name "$NAME""0"_ and _-p 5700:5700_)
-- To start the image:
-- - $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
-- To commit changes to the image:
-- - Open a new terminal window.
-- - $ sudo docker commit toyProblems_depthCompletion_GPU0 fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl
-- To exit the image without killing running code:
-- - Ctrl + P + Q
-- To get back into a running image:
-- - $ sudo docker attach toyProblems_depthCompletion_GPU0
+- General Docker usage:
+- - To start the image:
+- - - $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+- - To commit changes to the image:
+- - - Open a new terminal window.
+- - - $ sudo docker commit toyProblems_depthCompletion_GPU0 fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl
+- - To exit the image without killing running code:
+- - - Ctrl + P + Q
+- - To get back into a running image:
+- - - $ sudo docker attach toyProblems_depthCompletion_GPU0
 
 
 
