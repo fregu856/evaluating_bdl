@@ -160,7 +160,7 @@ Blabla, video..... TODO! TODO!
 
 segmentation:
 
-- Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in evaluating_bdl/segmentation.
+- Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _evaluating_bdl/segmentation_.
 
 
 
