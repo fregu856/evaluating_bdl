@@ -1,67 +1,8 @@
 # evaluating_bdl
 
-
-
-
-- My username on the server is "fregu482", i.e., my home folder is "/home/fregu482".
-
-- $ sudo docker pull fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
-- Create start_docker_image_segmentation.sh containing:
-```      
-#!/bin/bash
-
-# DEFAULT VALUES
-GPUIDS="0,1"
-NAME="segmentation_GPU"
-
-NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
-        -p 5900:5900 \
-        --name "$NAME""01" \
-        -v /home/fregu482:/home/ \
-        fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
-```
-- (Inside the image, /home/ will now be mapped to /home/fregu482, i.e., $ cd home takes you to the regular home folder.)
-
-- (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
-
-- To start the image:
-- - $ sudo sh start_docker_image_segmentation.sh
-- To commit changes to the image:
-- - Open a new terminal window.
-- - $ sudo docker commit segmentation_GPU01 fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
-- To stop the image when it’s running:
-- - $ sudo docker stop segmentation_GPU01
-- To exit the image without killing running code:
-- - Ctrl + P + Q
-- To get back into a running image:
-- - $ sudo docker attach segmentation_GPU01
-
-```
-$ sudo sh start_docker_image_segmentation.sh
-$ cd home
-$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
-```
-
-
-
-
-
-
-
-
-
-
-***
-***
-***
-***
-***
-***
-***
-***
-***
-
 Blabla, video..... TODO! TODO!
+
+
 
 
 
@@ -69,6 +10,10 @@ Blabla, video..... TODO! TODO!
 
 - The depthCompletion code is based on the implementation by [@fangchangma](https://github.com/fangchangma) found [here](https://github.com/fangchangma/self-supervised-depth-completion).
 - The segmentation code is based on the implementation by [@PkuRainBow](https://github.com/PkuRainBow) found [here](https://github.com/PkuRainBow/OCNet.pytorch), which in turn utilizes [inplace_abn](https://github.com/mapillary/inplace_abn) by [@mapillary](https://github.com/mapillary).
+
+
+
+
 
 
 
@@ -146,13 +91,13 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 
 
 
-- TODO! (DATASETS!)
+- TODO! TODO! TODO! (DATASETS!)
 
-- TODO! (DATASETS!)
+- TODO! TODO! TODO! (DATASETS!)
 
-- TODO! (DATASETS!)
+- TODO! TODO! TODO! (DATASETS!)
 
-- TODO! (DATASETS!)
+- TODO! TODO! TODO! (DATASETS!)
 
 
 - Example usage:
@@ -166,7 +111,45 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### segmentation
 
-- TODO!
+
+- My username on the server is "fregu482", i.e., my home folder is "/home/fregu482".
+
+- $ sudo docker pull fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- Create start_docker_image_segmentation.sh containing:
+```      
+#!/bin/bash
+
+# DEFAULT VALUES
+GPUIDS="0,1"
+NAME="segmentation_GPU"
+
+NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
+        -p 5900:5900 \
+        --name "$NAME""01" \
+        -v /home/fregu482:/home/ \
+        fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
+```
+- (Inside the image, /home/ will now be mapped to /home/fregu482, i.e., $ cd home takes you to the regular home folder.)
+
+- (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
+
+- To start the image:
+- - $ sudo sh start_docker_image_segmentation.sh
+- To commit changes to the image:
+- - Open a new terminal window.
+- - $ sudo docker commit segmentation_GPU01 fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- To stop the image when it’s running:
+- - $ sudo docker stop segmentation_GPU01
+- To exit the image without killing running code:
+- - Ctrl + P + Q
+- To get back into a running image:
+- - $ sudo docker attach segmentation_GPU01
+
+```
+$ sudo sh start_docker_image_segmentation.sh
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
+```
 
 
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
