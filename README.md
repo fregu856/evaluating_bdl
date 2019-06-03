@@ -171,7 +171,7 @@ Blabla, video..... TODO! TODO!
 
 - TODO!
 
-Example usage:
+- Example usage:
 ```
 $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
 $ cd --
@@ -192,7 +192,12 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 - Run _segmentation/utils/preprocess_synscapes.py_ (This will, among other things, create _/home/data/synscapes_meta/train_img_ids.pkl_ and _/home/data/synscapes_meta/val_img_ids.pkl_ by randomly selecting subsets of examples. The ones used by us are found in _segmentation/lists/synscapes_).
 
-
+- Example usage:
+```
+$ sudo sh start_docker_image_segmentation.sh
+$ cd home
+$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
+```
 
 
 
@@ -204,7 +209,12 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### toyRegression
 
-- TODO!
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py 
+```
 
 
 
@@ -220,7 +230,12 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### toyClassification
 
-- TODO!
+- Example usage:
+```
+$ sudo sh start_docker_image_toyProblems_depthCompletion.sh
+$ cd --
+$ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py 
+```
 
 
 
