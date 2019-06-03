@@ -162,6 +162,10 @@ segmentation:
 
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _evaluating_bdl/segmentation_.
 
+- Download Cityscapes by...and place it in...TODO!TODO!.
+- Download Synscapes by...and place it in...TODO!TODO!
+- Run _evaluating_bdl/segmentation/utils/preprocess_synscapes.py_ and...TODO!TODO!
+
 
 
 
