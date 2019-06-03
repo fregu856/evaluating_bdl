@@ -1,5 +1,7 @@
 # evaluating_bdl
 
+[evaluating_bdl](evaluating_bdl.png)
+
 Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 
 
