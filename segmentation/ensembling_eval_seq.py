@@ -16,8 +16,8 @@ from models.model import get_model
 
 from utils.utils import label_img_2_color
 
-#model_id = "ensembling_syn"
-model_id = "ensembling"
+model_id = "ensembling_syn"
+#model_id = "ensembling"
 model_is = [0, 1, 2, 3, 4, 5, 6, 7]
 print (model_is)
 
