@@ -172,7 +172,7 @@ The code has been tested on Ubuntu 16.04. Docker images are provided (see below)
 ### depthCompletion
 
 - $ sudo docker pull fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl
-- Create _start_docker_image_toyProblems_depthCompletion.sh_ containing (My username on the server is "fregu482", i.e., my home folder is "/home/fregu482". You will have to modify this accordingly):
+- Create _start_docker_image_toyProblems_depthCompletion.sh_ containing (My username on the server is _fregu482_, i.e., my home folder is _/home/fregu482_. You will have to modify this accordingly):
 ```
 #!/bin/bash
 
@@ -186,7 +186,7 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
         -v /home/fregu482:/root/ \
         fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl bash
 ```
-- (Inside the image, /root/ will now be mapped to /home/fregu482, i.e., _$ cd --_ takes you to the regular home folder)
+- (Inside the image, _/root/_ will now be mapped to _/home/fregu482_, i.e., _$ cd --_ takes you to the regular home folder)
 - (To create more containers, change the lines _GPUIDS="0"_, _--name "$NAME""0"_ and _-p 5700:5700_)
 
 - To start the image:
