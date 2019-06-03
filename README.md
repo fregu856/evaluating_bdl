@@ -1,6 +1,6 @@
 # evaluating_bdl
 
-[evaluating_bdl](https://raw.githubusercontent.com/fregu856/evaluating_bdl/master/evaluating_bdl.png)
+![training loss](https://raw.githubusercontent.com/fregu856/segmentation/master/training_logs/model_1/train_loss_per_epoch.png)
 
 Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 
