@@ -133,9 +133,9 @@ Blabla, video..... TODO! TODO!
 - [Usage](#usage)
 - [Documentation](#documentation)
 - - [depthCompletion](#documentationdepthcompletion)
-- - [segmentation](#segmentation)
-- - [toyRegression](#toyregression)
-- - [toyClassification](#toyclassification)
+- - [segmentation](#documentationsegmentation)
+- - [toyRegression](#documentationtoyregression)
+- - [toyClassification](#documentationtoyclassification)
 - [Pretrained models](#pretrained-models)
 
 
@@ -203,10 +203,10 @@ segmentation:
 ***
 ## Documentation:
 
-- [depthCompletion](#depthcompletion)
-- [segmentation](#segmentation)
-- [toyRegression](#toyregression)
-- [toyClassification](#toyclassification)
+- [depthCompletion](#documentationdepthcompletion)
+- [segmentation](#documentationsegmentation)
+- [toyRegression](#documentationtoyregression)
+- [toyClassification](#documentationtoyclassification)
 
 ### Documentation/depthCompletion
 
@@ -273,7 +273,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 
 
-### segmentation
+### Documentation/segmentation
 
 - Example usage:
 ```
@@ -348,7 +348,7 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 
 
 
-### toyRegression
+### Documentation/toyRegression
 
 - Example usage:
 ```
@@ -425,7 +425,7 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 
 
 
-### toyClassification
+### Documentation/toyClassification
 
 - Example usage:
 ```
