@@ -282,34 +282,34 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 
 
 
-- _datasets.py_: TODO!
+- _datasets.py_: Definitions of datasets, for Cityscapes and Synscapes.
 - %%%%%
 
 
 
-- _ensembling_train.py_: (x)
-- _ensembling_train_syn.py_: (x) 
+- _ensembling_train.py_: Code for training M _model.py_ models, on Cityscapes train.
+- _ensembling_train_syn.py_: As above, but on Synscapes train.
 
-- _ensembling_eval.py_: (x)
-- _ensembling_eval_syn.py_: (x) 
+- _ensembling_eval.py_: Computes the mIoU for a trained ensemble, on Cityscapes val. Also creates visualization images of the input image, ground truth, prediction and the estimated uncertainty. 
+- _ensembling_eval_syn.py_: As above, but on Synscapes val.
 
-- _ensembling_eval_ause_ece.py_: (x) 
-- _ensembling_eval_ause_ece_syn.py_: (x)
+- _ensembling_eval_ause_ece.py_: Computes the AUSE (mean +- std) and ECE (mean +- std) for M = [1, 2, 4, 8, 16] on Cityscapes val, based on a total of 26 trained ensemble members. Also creates sparsification plots, sparsification error curves and reliability diagrams.
+- _ensembling_eval_ause_ece_syn.py_: As above, but on Synscapes val.
 
-- _ensembling_eval_seq.py_: FIXA!
-- _ensembling_eval_seq_syn.py_: FIXA!  
+- _ensembling_eval_seq.py_: Creates visualization videos (input image, prediction and the estimated uncertainty) for a trained ensemble, on the three demo sequences in Cityscapes.
+- _ensembling_eval_seq_syn.py_: Creates a visualization video (input image, ground truth, prediction and the estimated uncertainty) for a trained ensemble, based on the 30 first images in Synscapes val.  
 - %%%%%
 
 
 
 - _mcdropout_train.py_: (x) 
-- _mcdropout_train_syn.py_: (x) 
+- _mcdropout_train_syn.py_: As above, but on Synscapes train.
 
 - _mcdropout_eval.py_: (x)
-- _mcdropout_eval_syn.py_: (x)
+- _mcdropout_eval_syn.py_: As above, but on Synscapes val.
 
 - _mcdropout_eval_ause_ece.py_: (x)
-- _mcdropout_eval_ause_ece_syn.py_: (x) 
+- _mcdropout_eval_ause_ece_syn.py_: As above, but on Synscapes val.
 
 - _mcdropout_eval_seq.py_: FIXA!
 - _mcdropout_eval_seq_syn.py_: FIXA!
