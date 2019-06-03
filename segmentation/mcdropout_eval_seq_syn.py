@@ -12,14 +12,12 @@ import numpy as np
 import cv2
 
 from dataset import get_segmentation_dataset
-from models.model import get_model
+from models.model_mcdropout import get_model
 
 from utils.utils import label_img_2_color, get_confusion_matrix
 
-model_id = "ensembling_syn"
-#model_id = "ensembling"
-model_is = [0, 1, 2, 3, 4, 5, 6, 7]
-print (model_is)
+model_id = "mcdropout_syn_0"
+M = 8
 
 dataset = "synscapes_train"
 data_dir = "/home/data/synscapes"
@@ -33,21 +31,18 @@ val_loader = data.DataLoader(get_segmentation_dataset(dataset, root=data_dir, ro
                              crop_size=(1024, 2048), scale=False, mirror=False, network=network),
                              batch_size=batch_size, shuffle=False, pin_memory=True)
 
-output_path = "/home/evaluating_bdl/segmentation/training_logs/%s_%s_eval_seq_syn" % (model_id, str(model_is))
+output_path = "/home/evaluating_bdl/segmentation/training_logs/%s_M%d_eval_seq_syn" % (model_id, M)
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 
-models = []
-for i in model_is:
-    restore_from = "/home/evaluating_bdl/segmentation/trained_models/%s_%d/checkpoint_40000.pth" % (model_id, i)
-    deeplab = get_model(num_classes=num_classes)
-    deeplab.load_state_dict(torch.load(restore_from))
-    model = nn.DataParallel(deeplab)
-    model.eval()
-    model.cuda()
-    models.append(model)
+restore_from = "/home/evaluating_bdl/segmentation/trained_models/%s/checkpoint_60000.pth" % model_id
+deeplab = get_model(num_classes=num_classes)
+deeplab.load_state_dict(torch.load(restore_from))
+model = nn.DataParallel(deeplab)
+model.eval()
+model.cuda()
 
-M_float = float(len(models))
+M_float = float(M)
 print (M_float)
 
 names = []
@@ -65,7 +60,7 @@ for step, batch in enumerate(val_loader):
         w = image.size(3)
 
         p = torch.zeros(batch_size, num_classes, h, w).cuda() # (shape: (batch_size, num_classes, h, w))
-        for model in models:
+        for i in range(M):
             logits_downsampled = model(Variable(image).cuda()) # (shape: (batch_size, num_classes, h/8, w/8))
             logits = F.upsample(input=logits_downsampled , size=(h, w), mode='bilinear', align_corners=True) # (shape: (batch_size, num_classes, h, w))
             p_value = F.softmax(logits, dim=1) # (shape: (batch_size, num_classes, h, w))
