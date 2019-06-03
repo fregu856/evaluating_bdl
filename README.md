@@ -131,12 +131,12 @@ Blabla, video..... TODO! TODO!
 
 ## Index
 - [Usage](#usage)
-- [Pretrained models](#pretrained-models)
 - [Documentation](#documentation)
 - - [depthCompletion](#depthcompletion)
 - - [segmentation](#segmentation)
 - - [toyRegression](#toyregression)
 - - [toyClassification](#toyclassification)
+- [Pretrained models](#pretrained-models)
 
 
 
@@ -176,40 +176,6 @@ segmentation:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-***
-***
-***
-## Pretrained models:
-
-- depthCompletion:
-- - - [depthCompletion/trained_models/ensembling_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1dUPL3neSXHrucgfs8r3VLVsY6j22NPh-)
-
-- - - [depthCompletion/trained_models/mcdropout_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1qkE3pW2JldXX4Hn_4BaLyN2ZyQ1l2NZo)
-
-
-
-- segmentation:
-- - - [segmentation/trained_models/ensembling_0/checkpoint_40000.pth](https://drive.google.com/open?id=1bG3Xrsa26TCAvRKMYKbphVOIErFn-YBz)
-
-- - - [segmentation/trained_models/ensembling_syn_0/checkpoint_40000.pth](https://drive.google.com/open?id=1j8TibQ8ycOl--qonOdqiajW6HE4yyAjO)
-
-- - - [segmentation/trained_models/mcdropout_syn_0/checkpoint_60000.pth](https://drive.google.com/open?id=11JcMn62vLiydWFnHIk7Pj52HnA-MD0yl)
-***
-***
-***
 
 
 
@@ -510,6 +476,42 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 
 - HMC:
 - - - Implementation of HMC using [Pyro](http://pyro.ai/).
+***
+***
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+## Pretrained models:
+
+- depthCompletion:
+- - - [depthCompletion/trained_models/ensembling_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1dUPL3neSXHrucgfs8r3VLVsY6j22NPh-)
+
+- - - [depthCompletion/trained_models/mcdropout_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1qkE3pW2JldXX4Hn_4BaLyN2ZyQ1l2NZo)
+
+
+
+- segmentation:
+- - - [segmentation/trained_models/ensembling_0/checkpoint_40000.pth](https://drive.google.com/open?id=1bG3Xrsa26TCAvRKMYKbphVOIErFn-YBz)
+
+- - - [segmentation/trained_models/ensembling_syn_0/checkpoint_40000.pth](https://drive.google.com/open?id=1j8TibQ8ycOl--qonOdqiajW6HE4yyAjO)
+
+- - - [segmentation/trained_models/mcdropout_syn_0/checkpoint_60000.pth](https://drive.google.com/open?id=11JcMn62vLiydWFnHIk7Pj52HnA-MD0yl)
 ***
 ***
 ***
