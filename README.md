@@ -163,6 +163,10 @@ Blabla, video..... TODO! TODO!
 - [toyClassification](#toyclassification)
 
 
+Test test test test...
+
+
+
 
 
 
@@ -170,6 +174,16 @@ Blabla, video..... TODO! TODO!
 ### depthCompletion
 
 - TODO!
+
+
+- TODO! (DATASETS!)
+
+- TODO! (DATASETS!)
+
+- TODO! (DATASETS!)
+
+- TODO! (DATASETS!)
+
 
 - Example usage:
 ```
@@ -184,6 +198,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 - TODO!
 
+
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
 
 - Download the [Cityscapes](https://www.cityscapes-dataset.com/) dataset and place it in _/home/data/cityscapes_ (_/home/data/cityscapes_ should contain the folders _leftImg8bit_ and _gtFine_).
@@ -191,6 +206,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 - Download the [Synscapes](https://7dlabs.com/synscapes-overview) dataset and place it in _/home/data/synscapes_ (_/home/data/synscapes_ should contain the folder _img_, which in turn should contain the folders _rgb-2k_ and _class_).
 
 - Run _segmentation/utils/preprocess_synscapes.py_ (This will, among other things, create _/home/data/synscapes_meta/train_img_ids.pkl_ and _/home/data/synscapes_meta/val_img_ids.pkl_ by randomly selecting subsets of examples. The ones used by us are found in _segmentation/lists/synscapes_).
+
 
 - Example usage:
 ```
