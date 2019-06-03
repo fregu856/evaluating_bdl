@@ -21,25 +21,7 @@ import pickle
 from dataset import get_segmentation_dataset
 from models.model import get_model
 
-def get_confusion_matrix(gt_label, pred_label, class_num):
-        """
-        Calcute the confusion matrix by given label and pred
-        :param gt_label: the ground truth label
-        :param pred_label: the pred label
-        :param class_num: the nunber of class
-        :return: the confusion matrix
-        """
-        index = (gt_label * class_num + pred_label).astype('int32')
-        label_count = np.bincount(index)
-        confusion_matrix = np.zeros((class_num, class_num))
-
-        for i_label in range(class_num):
-            for i_pred_label in range(class_num):
-                cur_index = i_label * class_num + i_pred_label
-                if cur_index < len(label_count):
-                    confusion_matrix[i_label, i_pred_label] = label_count[cur_index]
-
-        return confusion_matrix
+from utils.utils import get_confusion_matrix
 
 model_id = "ensembling_syn"
 possible_model_is = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
