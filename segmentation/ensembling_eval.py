@@ -11,7 +11,7 @@ import os
 import numpy as np
 import cv2
 
-from dataset import get_segmentation_dataset
+from datasets import DatasetCityscapesEval
 from models.model import get_model
 
 from utils.utils import label_img_2_color, get_confusion_matrix
@@ -21,17 +21,14 @@ model_id = "ensembling_syn"
 model_is = [0, 1, 2, 3, 4, 5, 6, 7]
 print (model_is)
 
-dataset = "cityscapes_train"
 data_dir = "/home/data/cityscapes"
-data_list = "/home/evaluating_bdl/segmentation/dataset/list/cityscapes/val.lst"
-network = "resnet101"
+data_list = "/home/evaluating_bdl/segmentation/lists/cityscapes/val.lst"
 batch_size = 2
 num_classes = 19
 max_entropy = np.log(num_classes)
 
-val_loader = data.DataLoader(get_segmentation_dataset(dataset, root=data_dir, list_path=data_list,
-                             crop_size=(1024, 2048), scale=False, mirror=False, network=network),
-                             batch_size=batch_size, shuffle=False, pin_memory=True)
+eval_dataset = DatasetCityscapesEval(root=data_dir, list_path=data_list)
+eval_loader = data.DataLoader(eval_dataset, batch_size=batch_size, shuffle=False, pin_memory=True)
 
 output_path = "/home/evaluating_bdl/segmentation/training_logs/%s_%s_eval" % (model_id, str(model_is))
 if not os.path.exists(output_path):
@@ -51,9 +48,9 @@ M_float = float(len(models))
 print (M_float)
 
 confusion_matrix = np.zeros((num_classes, num_classes))
-for step, batch in enumerate(val_loader):
+for step, batch in enumerate(eval_loader):
     with torch.no_grad():
-        print ("%d/%d" % (step+1, len(val_loader)))
+        print ("%d/%d" % (step+1, len(eval_loader)))
 
         image, label, _, name = batch
         # (image has shape: (batch_size, 3, h, w))
@@ -114,7 +111,7 @@ for step, batch in enumerate(val_loader):
                 cv2.imwrite(output_path + "/" + name[i] + "_entropy.png", entropy_img)
 
         # # # # # # # # # # # # # # # # # # debug START:
-        # if step > 0:
+        # if step > 5:
         #     break
         # # # # # # # # # # # # # # # # # # debug END:
 

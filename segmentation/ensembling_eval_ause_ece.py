@@ -18,7 +18,7 @@ import cv2
 import random
 import pickle
 
-from dataset import get_segmentation_dataset
+from datasets import DatasetCityscapesEval
 from models.model import get_model
 
 from utils.utils import get_confusion_matrix
@@ -39,16 +39,13 @@ if not os.path.exists(output_path):
 num_conf_intervals = 10
 conf_interval_size = 1.0/num_conf_intervals
 
-dataset = "cityscapes_train"
 data_dir = "/home/data/cityscapes"
-data_list = "/home/evaluating_bdl/segmentation/dataset/list/cityscapes/val.lst"
-network = "resnet101"
+data_list = "/home/evaluating_bdl/segmentation/lists/cityscapes/val.lst"
 batch_size = 2
 num_classes = 19
 
-testloader = data.DataLoader(get_segmentation_dataset(dataset, root=data_dir, list_path=data_list,
-                             crop_size=(1024, 2048), scale=False, mirror=False, network=network),
-                             batch_size=batch_size, shuffle=False, pin_memory=True)
+eval_dataset = DatasetCityscapesEval(root=data_dir, list_path=data_list)
+eval_loader = data.DataLoader(eval_dataset, batch_size=batch_size, shuffle=False, pin_memory=True)
 
 colors = {}
 colors[1] = "k"
@@ -185,9 +182,9 @@ for M_step, M in enumerate(M_values):
         confusion_matrix = np.zeros((num_classes, num_classes))
         entropy_values = np.array([])
         squared_error_values = np.array([])
-        for step, batch in enumerate(testloader):
+        for step, batch in enumerate(eval_loader):
             with torch.no_grad():
-                print ("%d/%d" % (step+1, len(testloader)))
+                print ("%d/%d" % (step+1, len(eval_loader)))
 
                 image, label, _, name = batch
                 # (image has shape: (batch_size, 3, h, w))

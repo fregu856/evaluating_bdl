@@ -1,4 +1,5 @@
-# code-checked 
+# code-checked
+# server-checked
 
 import cv2
 import numpy as np
@@ -20,6 +21,7 @@ def id2trainId(label, id_to_trainid):
     label_copy = label.copy()
     for k, v in id_to_trainid.items():
         label_copy[label == k] = v
+    return label_copy
 
 ################################################################################
 # Cityscapes

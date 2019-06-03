@@ -13,7 +13,7 @@ from utils.criterion import CriterionCrossEntropy
 from utils.parallel import DataParallelModel, DataParallelCriterion
 
 from models.model_mcdropout import get_model
-from dataset.cityscapes_cleaned10 import CitySegmentationTrain
+from datasets import DatasetCityscapesAugmentation
 
 import matplotlib
 matplotlib.use("Agg")
@@ -28,7 +28,7 @@ num_classes = 19
 restore_from = "/home/evaluating_bdl/segmentation/resnet101-imagenet.pth"
 snapshot_dir_base = "/home/evaluating_bdl/segmentation/training_logs/%s" % model_id
 data_dir = "/home/data/cityscapes"
-data_list = "/home/evaluating_bdl/segmentation/dataset/list/cityscapes/train.lst"
+data_list = "/home/evaluating_bdl/segmentation/lists/cityscapes/train.lst"
 batch_size = 8
 random_mirror = True
 random_scale = True
@@ -72,7 +72,7 @@ for model_i in range(M):
     criterion = DataParallelCriterion(criterion)
     criterion.cuda()
 
-    train_dataset = CitySegmentationTrain(root=data_dir, list_path=data_list, max_iters=num_steps*batch_size, crop_size=crop_size)
+    train_dataset = DatasetCityscapesAugmentation(root=data_dir, list_path=data_list, max_iters=num_steps*batch_size, crop_size=crop_size)
     train_loader = data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=1, pin_memory=True)
 
     optimizer = optim.SGD([{'params': filter(lambda p: p.requires_grad, deeplab.parameters()), 'lr': learning_rate }],

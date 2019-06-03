@@ -11,7 +11,7 @@ import os
 import numpy as np
 import cv2
 
-from dataset.cityscapes import CitySegmentationSeq
+from datasets import DatasetCityscapesEvalSeq
 from models.model import get_model
 
 from utils.utils import label_img_2_color
@@ -47,7 +47,7 @@ for step, seq in enumerate(demo_sequences):
     if not os.path.exists(output_path_seq):
         os.makedirs(output_path_seq)
 
-    eval_dataset = CitySegmentationSeq(data_path=data_dir, sequence=seq)
+    eval_dataset = DatasetCityscapesEvalSeq(data_path=data_dir, sequence=seq)
     eval_loader = data.DataLoader(dataset=eval_dataset, batch_size=batch_size, shuffle=False, num_workers=1)
 
     names = []

@@ -1,4 +1,4 @@
-# code-checkd
+# code-checked
 # server-checked
 
 import torch
@@ -13,7 +13,7 @@ from utils.criterion import CriterionCrossEntropy
 from utils.parallel import DataParallelModel, DataParallelCriterion
 
 from models.model import get_model
-from dataset.synscapes_cleaned10 import SynSegmentationTrain ####%%%%%%%
+from datasets import DatasetSynscapesAugmentation
 
 import matplotlib
 matplotlib.use("Agg")
@@ -72,7 +72,7 @@ for model_i in range(M):
     criterion = DataParallelCriterion(criterion)
     criterion.cuda()
 
-    train_dataset = SynSegmentationTrain(root=data_dir, root_meta=synscapes_meta_path, type="train", max_iters=num_steps*batch_size, crop_size=crop_size)
+    train_dataset = DatasetSynscapesAugmentation(root=data_dir, root_meta=synscapes_meta_path, type="train", max_iters=num_steps*batch_size, crop_size=crop_size)
     train_loader = data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=1, pin_memory=True)
 
     optimizer = optim.SGD([{'params': filter(lambda p: p.requires_grad, deeplab.parameters()), 'lr': learning_rate }],
