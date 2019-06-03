@@ -157,7 +157,7 @@ Blabla, video..... TODO! TODO!
 ***
 ## Usage:
 
-The code has been tested on Ubuntu 16.04. Docker containers are provided (see below).
+The code has been tested on Ubuntu 16.04. Docker images are provided (see below).
 
 - [depthCompletion](#depthcompletion)
 - [segmentation](#segmentation)
@@ -187,7 +187,7 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
         fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl bash
 ```
 - (Inside the image, /root/ will now be mapped to /home/fregu482, i.e., _$ cd --_ takes you to the regular home folder)
-- (To create more containers, change the lines `GPUIDS="0"`, `--name "$NAME""0"` and `-p 5700:5700`)
+- (To create more containers, change the lines _GPUIDS="0"_, _--name "$NAME""0"_ and _-p 5700:5700_)
 
 - To start the image:
 - - $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
