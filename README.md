@@ -1,6 +1,6 @@
 # evaluating_bdl
 
-[evaluating_bdl](evaluating_bdl.png)
+[evaluating_bdl](https://raw.githubusercontent.com/fregu856/evaluating_bdl/master/evaluating_bdl.png)
 
 Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 
