@@ -10,8 +10,9 @@ import numpy as np
 from torch.autograd import Variable
 import functools
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(BASE_DIR)
 from resnet_block import conv3x3, Bottleneck
-
 from aspp import ASPP
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
