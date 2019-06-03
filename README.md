@@ -138,8 +138,6 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - To commit changes to the image:
 - - Open a new terminal window.
 - - $ sudo docker commit toyProblems_depthCompletion_GPU0 fregu856/evaluating_bdl:pytorch_pytorch_0.4_cuda9_cudnn7_evaluating_bdl
-- To stop the image when it’s running:
-- - $ sudo docker stop toyProblems_depthCompletion_GPU0
 - To exit the image without killing running code:
 - - Ctrl + P + Q
 - To get back into a running image:
