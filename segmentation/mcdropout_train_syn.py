@@ -1,4 +1,4 @@
-# code-checkd
+# code-checked
 # server-checked
 
 import torch
