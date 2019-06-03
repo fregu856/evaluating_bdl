@@ -190,6 +190,35 @@ Blabla, video..... TODO! TODO!
 
 
 
+
+
+
+
+
+
+
+### toyRegression
+
+- TODO!
+
+
+
+
+
+
+
+
+
+
+
+
+
+### toyClassification
+
+- TODO!
+
+
+
 ***
 ***
 ***
