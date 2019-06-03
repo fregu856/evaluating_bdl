@@ -131,11 +131,17 @@ Blabla, video..... TODO! TODO!
 
 ## Index
 - [Usage](#usage)
+- - [depthCompletion](#depthcompletion)
+- - [segmentation](#segmentation)
+- - [toyRegression](#toyregression)
+- - [toyClassification](#toyclassification)
+
 - [Documentation](#documentation)
 - - [depthCompletion](#documentationdepthcompletion)
 - - [segmentation](#documentationsegmentation)
 - - [toyRegression](#documentationtoyregression)
 - - [toyClassification](#documentationtoyclassification)
+
 - [Pretrained models](#pretrained-models)
 
 
@@ -153,13 +159,27 @@ Blabla, video..... TODO! TODO!
 ***
 ## Usage:
 
+- [depthCompletion](#depthcompletion)
+- [segmentation](#segmentation)
+- [toyRegression](#toyregression)
+- [toyClassification](#toyclassification)
+
+
+
+
+
+
+### depthCompletion
+
 - TODO!
 
 
 
 
 
-segmentation:
+### segmentation
+
+- TODO!
 
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
 
