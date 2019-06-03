@@ -92,7 +92,6 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - - - $ sudo docker attach toyProblems_depthCompletion_GPU0
 
 
-
 - TODO! TODO! TODO! (DATASETS!)
 
 - TODO! TODO! TODO! (DATASETS!)
