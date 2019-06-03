@@ -268,18 +268,17 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 ```
 
 - models:
-- - - model.py: TODO!
-- - - model_mcdropout.py: TODO!
-- - - aspp.py: TODO!
-- - - resnet_block.py: TODO!
+- - - _model.py_: Definition of the CNN.
+- - - _model_mcdropout.py_: Definition of the CNN, with inserted dropout layers.
+- - - _aspp.py_: Definition of the ASPP module.
+- - - _resnet_block.py_: Definition of a ResNet block.
 
 
 
 - utils:
-- - - criterion.py: TODO!
-- - - parallel.py: TODO!
-- - - preprocess_synscapes.py: TODO!
-- - - utils.py: TODO!
+- - - _criterion.py_: Definition of the cross-entropy loss.
+- - - _preprocess_synscapes.py_: Creates the Synscapes train (val) dataset by randomly selecting a subset of 2975 (500) examples, and resizes the labels to 1024 x 2048.
+- - - _utils.py_: Helper functions (evaluation and visualization).
 
 
 
