@@ -10,13 +10,12 @@ import numpy as np
 from torch.autograd import Variable
 import functools
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
-sys.path.append(os.path.join(BASE_DIR, '../utils'))
 from resnet_block import conv3x3, Bottleneck
 
 from aspp import ASPP
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, '../inplace_abn'))
 from bn import InPlaceABNSync
 BatchNorm2d = functools.partial(InPlaceABNSync, activation='none')
