@@ -161,9 +161,10 @@ Blabla, video..... TODO! TODO!
 
 segmentation:
 
-- Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _evaluating_bdl/segmentation_.
+- Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
 
-- Download Cityscapes by...and place it in...TODO!TODO!.
+- Download the [Cityscapes](https://www.cityscapes-dataset.com/) and place it in /home/data/cityscapes (/home/data/cityscapes should contain the folder leftImg8bit and gtFine).
+
 - Download Synscapes by...and place it in...TODO!TODO!
 - Run _evaluating_bdl/segmentation/utils/preprocess_synscapes.py_ and...TODO!TODO!
 
