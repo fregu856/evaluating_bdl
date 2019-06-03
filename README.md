@@ -111,11 +111,8 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 ### segmentation
 
-
-- My username on the server is "fregu482", i.e., my home folder is "/home/fregu482".
-
 - $ sudo docker pull fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
-- Create start_docker_image_segmentation.sh containing:
+- Create _start_docker_image_segmentation.sh_ containing (My username on the server is _fregu482_, i.e., my home folder is _/home/fregu482_. You will have to modify this accordingly):
 ```      
 #!/bin/bash
 
@@ -129,27 +126,18 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
         -v /home/fregu482:/home/ \
         fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl bash
 ```
-- (Inside the image, /home/ will now be mapped to /home/fregu482, i.e., $ cd home takes you to the regular home folder.)
-
-- (to create more containers, change "GPUIDS", "--name "$NAME""01"" and "-p 5900:5900")
-
-- To start the image:
-- - $ sudo sh start_docker_image_segmentation.sh
-- To commit changes to the image:
-- - Open a new terminal window.
-- - $ sudo docker commit segmentation_GPU01 fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
-- To stop the image when it’s running:
-- - $ sudo docker stop segmentation_GPU01
-- To exit the image without killing running code:
-- - Ctrl + P + Q
-- To get back into a running image:
-- - $ sudo docker attach segmentation_GPU01
-
-```
-$ sudo sh start_docker_image_segmentation.sh
-$ cd home
-$ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.py
-```
+- (Inside the image, _/home/_ will now be mapped to _/home/fregu482_, i.e., $ cd home takes you to the regular home folder)
+- (To create more containers, change the lines _GPUIDS="0,1"_, _--name "$NAME""01"_ and _-p 5900:5900_)
+- General Docker usage:
+- - To start the image:
+- - - $ sudo sh start_docker_image_segmentation.sh
+- - To commit changes to the image:
+- - - Open a new terminal window.
+- - - $ sudo docker commit segmentation_GPU01 fregu856/evaluating_bdl:rainbowsecret_pytorch04_20180905_evaluating_bdl
+- - To exit the image without killing running code:
+- - - Ctrl + P + Q
+- - To get back into a running image:
+- - - $ sudo docker attach segmentation_GPU01
 
 
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
