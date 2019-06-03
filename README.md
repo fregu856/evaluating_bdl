@@ -9,7 +9,6 @@ _[Fredrik K. Gustafsson](http://www.fregu856.com/), [Martin Danelljan](https://m
 We propose an evaluation framework for predictive uncertainty estimation that is specifically designed to test the robustness required in real-world computer vision applications. Using the proposed framework, we perform an extensive comparison of the popular ensembling and MC-dropout methods on the tasks of depth completion and street-scene semantic segmentation. Our comparison suggests that ensembling consistently provides more reliable uncertainty estimates.
 
 [Youtube video]() with qualitative results:
-
 [![demo video with results](https://img.youtube.com/vi/KdrHLXpYYlg/0.jpg)](https://www.youtube.com/watch?v=KdrHLXpYYlg)
 
 If you find this work useful, please consider citing:
