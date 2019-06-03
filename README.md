@@ -165,7 +165,9 @@ segmentation:
 
 - Download the [Cityscapes](https://www.cityscapes-dataset.com/) and place it in /home/data/cityscapes (/home/data/cityscapes should contain the folder leftImg8bit and gtFine).
 
-- Download Synscapes by...and place it in...TODO!TODO!
+- Download the [Synscapes](https://7dlabs.com/synscapes-overview) dataset and place it in /home/data/synscapes (/home/data/synscapes should contain the img folder, which in turn should contain the rgb-2k and class folders).
+
+
 - Run _evaluating_bdl/segmentation/utils/preprocess_synscapes.py_ and...TODO!TODO!
 
 
