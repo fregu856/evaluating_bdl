@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch.utils import data
 
 import os
-import numpy as np
+import numpy as np 
 import cv2
 
 from dataset.cityscapes import CitySegmentationSeq
