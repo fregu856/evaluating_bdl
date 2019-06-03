@@ -92,7 +92,7 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - - - $ sudo docker attach toyProblems_depthCompletion_GPU0
 
 
-- Download the [KITTI depth completion]() dataset (data_depth_annotated.zip, data_depth_selection.zip and data_depth_velodyne.zip) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
+- Download the [KITTI depth completion](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion) dataset (data_depth_annotated.zip, data_depth_selection.zip and data_depth_velodyne.zip) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
 
 depth, rgb and raw! OBS!
 
