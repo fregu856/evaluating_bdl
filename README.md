@@ -5,9 +5,7 @@
 Official implementation (PyTorch) of the paper: \
 **Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision**, 2019 [[arXiv]]() [[project]](). \
 _[Fredrik K. Gustafsson](http://www.fregu856.com/), [Martin Danelljan](https://martin-danelljan.github.io/), [Thomas B. Schön](http://user.it.uu.se/~thosc112/)._
-```
 We propose an evaluation framework for predictive uncertainty estimation that is specifically designed to test the robustness required in real-world computer vision applications. Using the proposed framework, we perform an extensive comparison of the popular ensembling and MC-dropout methods on the tasks of depth completion and street-scene semantic segmentation. Our comparison suggests that ensembling consistently provides more reliable uncertainty estimates.
-```
 
 }}} EMBEDDED VIDEO {{{
 
