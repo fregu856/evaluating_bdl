@@ -132,7 +132,7 @@ Blabla, video..... TODO! TODO!
 ## Index
 - [Usage](#usage)
 - [Documentation](#documentation)
-- - [depthCompletion](#depthcompletion)
+- - [Doc - depthCompletion](#depthcompletion)
 - - [segmentation](#segmentation)
 - - [toyRegression](#toyregression)
 - - [toyClassification](#toyclassification)
