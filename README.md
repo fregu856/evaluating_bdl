@@ -252,7 +252,10 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 ```
 
 - models:
-- - -
+- - - model.py: TODO!
+- - - model_mcdropout.py: TODO!
+- - - aspp.py: TODO!
+- - - resnet_block.py: TODO!
 
 
 
