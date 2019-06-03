@@ -278,7 +278,7 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 - utils:
 - - - _criterion.py_: Definition of the cross-entropy loss.
 - - - _preprocess_synscapes.py_: Creates the Synscapes train (val) dataset by randomly selecting a subset of 2975 (500) examples, and resizes the labels to 1024 x 2048.
-- - - _utils.py_: Helper functions (evaluation and visualization).
+- - - _utils.py_: Helper functions for evaluation and visualization.
 
 
 
