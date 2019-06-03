@@ -6,7 +6,7 @@ This repository contains the official implementation (PyTorch) of the paper [Eva
 
 Blabla, video, description / short abstract, bibtex....TODO! TODO!
 
-If you find this work useful in your research, please consider citing:
+If you find this work useful, please consider citing:
 ```
 TODO! TODO! TODO!
 ```
