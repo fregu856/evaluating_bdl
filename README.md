@@ -4,7 +4,8 @@
 
 Official implementation (PyTorch) of the paper: \
 **Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision**, 2019. \
-_[Fredrik K. Gustafsson](http://www.fregu856.com/), [Martin Danelljan](https://martin-danelljan.github.io/), [Thomas B. Schön](http://user.it.uu.se/~thosc112/)._
+_[Fredrik K. Gustafsson](http://www.fregu856.com/), [Martin Danelljan](https://martin-danelljan.github.io/), [Thomas B. Schön](http://user.it.uu.se/~thosc112/)._ \
+[[arXiv]]()
 
 Blabla, video, description / short abstract, bibtex....TODO! TODO!
 
