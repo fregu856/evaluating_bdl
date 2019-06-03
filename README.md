@@ -163,9 +163,7 @@ Blabla, video..... TODO! TODO!
 - [toyClassification](#toyclassification)
 
 
-Test test test test...
-
-
+The code has been tested on Ubuntu 16.04. Docker containers are provided (see below).
 
 
 
@@ -205,7 +203,7 @@ $ python evaluating_bdl/depthCompletion/ensembling_train_virtual.py
 
 - Download the [Synscapes](https://7dlabs.com/synscapes-overview) dataset and place it in _/home/data/synscapes_ (_/home/data/synscapes_ should contain the folder _img_, which in turn should contain the folders _rgb-2k_ and _class_).
 
-- Run _segmentation/utils/preprocess_synscapes.py_ (This will, among other things, create _/home/data/synscapes_meta/train_img_ids.pkl_ and _/home/data/synscapes_meta/val_img_ids.pkl_ by randomly selecting subsets of examples. The ones used by us are found in _segmentation/lists/synscapes_).
+- Run _segmentation/utils/preprocess_synscapes.py_ (This will, among other things, create _/home/data/synscapes_meta/train_img_ids.pkl_ and _/home/data/synscapes_meta/val_img_ids.pkl_ by randomly selecting subsets of examples. The ones used in the paper are found in _segmentation/lists/synscapes_).
 
 
 - Example usage:
