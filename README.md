@@ -163,12 +163,11 @@ segmentation:
 
 - Download _resnet101-imagenet.pth_ from [here](http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth) and place it in _segmentation_.
 
-- Download the [Cityscapes](https://www.cityscapes-dataset.com/) and place it in /home/data/cityscapes (/home/data/cityscapes should contain the folder leftImg8bit and gtFine).
+- Download the [Cityscapes](https://www.cityscapes-dataset.com/) and place it in /home/data/cityscapes (/home/data/cityscapes should contain the folders leftImg8bit and gtFine).
 
-- Download the [Synscapes](https://7dlabs.com/synscapes-overview) dataset and place it in /home/data/synscapes (/home/data/synscapes should contain the img folder, which in turn should contain the rgb-2k and class folders).
+- Download the [Synscapes](https://7dlabs.com/synscapes-overview) dataset and place it in /home/data/synscapes (/home/data/synscapes should contain the folder img, which in turn should contain the folders rgb-2k and class).
 
-
-- Run _evaluating_bdl/segmentation/utils/preprocess_synscapes.py_ and...TODO!TODO!
+- Run _segmentation/utils/preprocess_synscapes.py_ (This will, among other things, create /home/data/synscapes_meta/train_img_ids.pkl and /home/data/synscapes_meta/val_img_ids.pkl by randomly selecting subsets of examples. The ones used by us are found in _segmentation/lists/synscapes_.).
 
 
 
