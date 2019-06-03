@@ -559,6 +559,3 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - - - [segmentation/trained_models/ensembling_syn_0/checkpoint_40000.pth](https://drive.google.com/open?id=1j8TibQ8ycOl--qonOdqiajW6HE4yyAjO) (obtained by running ensembling_train_syn.py)
 
 - - - [segmentation/trained_models/mcdropout_syn_0/checkpoint_60000.pth](https://drive.google.com/open?id=11JcMn62vLiydWFnHIk7Pj52HnA-MD0yl) (obtained by running mcdropout_train_syn.py)
-***
-***
-***
