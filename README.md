@@ -123,7 +123,7 @@ Blabla, video..... TODO! TODO!
 ## Acknowledgements
 
 - The depthCompletion code is based on the implementation by [@fangchangma](https://github.com/fangchangma) found [here](https://github.com/fangchangma/self-supervised-depth-completion).
-- The segmentation code is based on the implementation by [@PkuRainBow](https://github.com/PkuRainBow) found [here](https://github.com/PkuRainBow/OCNet.pytorch).
+- The segmentation code is based on the implementation by [@PkuRainBow](https://github.com/PkuRainBow) found [here](https://github.com/PkuRainBow/OCNet.pytorch), which in turn utilizes [inplace_abn](https://github.com/mapillary/inplace_abn) by [@mapillary](https://github.com/mapillary).
 
 
 
@@ -131,6 +131,7 @@ Blabla, video..... TODO! TODO!
 
 ## Index
 - [Usage](#usage)
+- [Pretrained models](#pretrained-models)
 - [Documentation](#documentation)
 - - [depthCompletion](#depthcompletion)
 - - [segmentation](#segmentation)
@@ -172,6 +173,45 @@ segmentation:
 ***
 ***
 ***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+***
+***
+## Pretrained models:
+
+- TODO!
+
+
+
+
+
+***
+***
+***
+
+
+
+
+
+
+
+
+
 
 
 
