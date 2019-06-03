@@ -133,7 +133,6 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 ```
 - (Inside the image, _/root/_ will now be mapped to _/home/fregu482_, i.e., $ cd -- takes you to the regular home folder)
 - (To create more containers, change the lines _GPUIDS="0"_, _--name "$NAME""0"_ and _-p 5700:5700_)
-
 - To start the image:
 - - $ sudo sh start_docker_image_toyProblems_depthCompletion.sh
 - To commit changes to the image:
