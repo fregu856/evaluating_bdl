@@ -92,21 +92,12 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - - - $ sudo docker attach toyProblems_depthCompletion_GPU0
 
 
-- Download the [KITTI depth completion](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion) dataset (data_depth_annotated.zip, data_depth_selection.zip and data_depth_velodyne.zip) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
+- Download the [KITTI depth completion](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion) dataset (_data_depth_annotated.zip_, _data_depth_selection.zip_ and _data_depth_velodyne.zip_) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
 
 - Create _/root/data/kitti_raw_ and download the [KITTI raw](http://www.cvlibs.net/datasets/kitti/raw_data.php) dataset using [download_kitti_raw.py](https://github.com/fregu856/evaluating_bdl/blob/master/depthCompletion/utils/download_kitti_raw.py).
 
+- Create _/root/data/kitti_rgb_. For each folder in _/root/data/kitti_depth/train_ (e.g. _2011_09_26_drive_0001_sync_), copy the corresponding folder in _/root/data/kitti_raw_ and place it in _/root/data/kitti_rgb/train_.
 
-depth, rgb and raw! OBS!
-
-
-- TODO! TODO! TODO! (DATASETS!)
-
-- TODO! TODO! TODO! (DATASETS!)
-
-- TODO! TODO! TODO! (DATASETS!)
-
-- TODO! TODO! TODO! (DATASETS!)
 
 VIRTUAL KITTI!
 
