@@ -47,7 +47,7 @@ Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 ***
 ***
 ***
-## Usage:
+## Usage
 
 The code has been tested on Ubuntu 16.04. Docker images are provided (see below).
 
@@ -92,18 +92,16 @@ NV_GPU="$GPUIDS" nvidia-docker run -it --rm --shm-size 12G \
 - - - $ sudo docker attach toyProblems_depthCompletion_GPU0
 
 
-- Download the [KITTI depth completion](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion) dataset (data_depth_annotated.zip, data_depth_selection.zip and data_depth_velodyne.zip) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
 
-depth, rgb and raw! OBS!
+- Download the [KITTI depth completion](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion) dataset (_data_depth_annotated.zip_, _data_depth_selection.zip_ and _data_depth_velodyne.zip_) and place it in _/root/data/kitti_depth_ (_/root/data/kitti_depth_ should contain the folders _train_, _val_ and _depth_selection_).
+
+- Create _/root/data/kitti_raw_ and download the [KITTI raw](http://www.cvlibs.net/datasets/kitti/raw_data.php) dataset using [download_kitti_raw.py](https://github.com/fregu856/evaluating_bdl/blob/master/depthCompletion/utils/download_kitti_raw.py).
+
+- Create _/root/data/kitti_rgb_. For each folder in _/root/data/kitti_depth/train_ (e.g. _2011_09_26_drive_0001_sync_), copy the corresponding folder in _/root/data/kitti_raw_ and place it in _/root/data/kitti_rgb/train_.
 
 
-- TODO! TODO! TODO! (DATASETS!)
+- Download the [virtual KITTI](https://europe.naverlabs.com/Research/Computer-Vision/Proxy-Virtual-Worlds/) dataset (_vkitti_1.3.1_depthgt.tar_ and _vkitti_1.3.1_rgb.tar_) and place in _/root/data/virtualkitti_ (_/root/data/virtualkitti_ should contain the folders _vkitti_1.3.1_depthgt_ and _vkitti_1.3.1_rgb_).
 
-- TODO! TODO! TODO! (DATASETS!)
-
-- TODO! TODO! TODO! (DATASETS!)
-
-- TODO! TODO! TODO! (DATASETS!)
 
 
 - Example usage:
@@ -244,7 +242,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ***
 ***
 ***
-## Documentation:
+## Documentation
 
 - [depthCompletion](#documentationdepthcompletion)
 - [segmentation](#documentationsegmentation)
@@ -546,7 +544,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ***
 ***
 ***
-## Pretrained models:
+## Pretrained models
 
 - depthCompletion:
 - - - [depthCompletion/trained_models/ensembling_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1dUPL3neSXHrucgfs8r3VLVsY6j22NPh-) (obtained by running ensembling_train_virtual.py)
@@ -561,6 +559,3 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - - - [segmentation/trained_models/ensembling_syn_0/checkpoint_40000.pth](https://drive.google.com/open?id=1j8TibQ8ycOl--qonOdqiajW6HE4yyAjO) (obtained by running ensembling_train_syn.py)
 
 - - - [segmentation/trained_models/mcdropout_syn_0/checkpoint_60000.pth](https://drive.google.com/open?id=11JcMn62vLiydWFnHIk7Pj52HnA-MD0yl) (obtained by running mcdropout_train_syn.py)
-***
-***
-***
