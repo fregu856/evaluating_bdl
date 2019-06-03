@@ -157,13 +157,13 @@ Blabla, video..... TODO! TODO!
 ***
 ## Usage:
 
+The code has been tested on Ubuntu 16.04. Docker containers are provided (see below).
+
 - [depthCompletion](#depthcompletion)
 - [segmentation](#segmentation)
 - [toyRegression](#toyregression)
 - [toyClassification](#toyclassification)
 
-
-The code has been tested on Ubuntu 16.04. Docker containers are provided (see below).
 
 
 
