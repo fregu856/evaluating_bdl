@@ -2,7 +2,8 @@
 
 ![overview image](evaluating_bdl_.png)
 
-Official implementation (PyTorch) of the paper [Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision](), 2019.
+Official implementation (PyTorch) of the paper: 
+[Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision](), 2019.
 
 Blabla, video, description / short abstract, bibtex....TODO! TODO!
 
