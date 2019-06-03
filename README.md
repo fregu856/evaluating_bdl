@@ -1,6 +1,6 @@
 # evaluating_bdl
 
-Blabla, video..... TODO! TODO!
+Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 
 
 
