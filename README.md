@@ -135,13 +135,11 @@ Blabla, video..... TODO! TODO!
 - - [segmentation](#segmentation)
 - - [toyRegression](#toyregression)
 - - [toyClassification](#toyclassification)
-
 - [Documentation](#documentation)
 - - [depthCompletion](#documentationdepthcompletion)
 - - [segmentation](#documentationsegmentation)
 - - [toyRegression](#documentationtoyregression)
 - - [toyClassification](#documentationtoyclassification)
-
 - [Pretrained models](#pretrained-models)
 
 
