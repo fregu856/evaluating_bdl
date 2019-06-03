@@ -47,7 +47,7 @@ Blabla, video, image, description / short abstract, bibtex....TODO! TODO!
 ***
 ***
 ***
-## Usage:
+## Usage
 
 The code has been tested on Ubuntu 16.04. Docker images are provided (see below).
 
@@ -242,7 +242,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ***
 ***
 ***
-## Documentation:
+## Documentation
 
 - [depthCompletion](#documentationdepthcompletion)
 - [segmentation](#documentationsegmentation)
@@ -544,7 +544,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 ***
 ***
 ***
-## Pretrained models:
+## Pretrained models
 
 - depthCompletion:
 - - - [depthCompletion/trained_models/ensembling_virtual_0/checkpoint_40000.pth](https://drive.google.com/open?id=1dUPL3neSXHrucgfs8r3VLVsY6j22NPh-) (obtained by running ensembling_train_virtual.py)
