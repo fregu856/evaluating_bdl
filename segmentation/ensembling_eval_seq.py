@@ -68,22 +68,13 @@ for step, seq in enumerate(demo_sequences):
             w = image.size(3)
 
             p = torch.zeros(batch_size, num_classes, h, w).cuda() # (shape: (batch_size, num_classes, h, w))
-            average_entropy = np.zeros((batch_size, h, w)) # (shape: (batch_size, h, w))
             for model in models:
                 logits_downsampled = model(Variable(image).cuda()) # (shape: (batch_size, num_classes, h/8, w/8))
                 logits = F.upsample(input=logits_downsampled , size=(h, w), mode='bilinear', align_corners=True) # (shape: (batch_size, num_classes, h, w))
-
                 p_value = F.softmax(logits, dim=1) # (shape: (batch_size, num_classes, h, w))
-
                 p = p + p_value/M_float
 
-                p_value_numpy = p_value.cpu().data.numpy().transpose(0, 2, 3, 1) # (array of shape: (batch_size, h, w, num_classes))
-                entropy_value = -np.sum(p_value_numpy*np.log(p_value_numpy), axis=3) # (shape: (batch_size, h, w))
-                average_entropy = average_entropy + entropy_value/M_float
-
             p_numpy = p.cpu().data.numpy().transpose(0, 2, 3, 1) # (array of shape: (batch_size, h, w, num_classes))
-
-            # (average_entropy has shape: (batch_size, h, w))
 
             entropy = -np.sum(p_numpy*np.log(p_numpy), axis=3) # (shape: (batch_size, h, w))
             pred_label_imgs_raw = np.argmax(p_numpy, axis=3).astype(np.uint8)
@@ -107,18 +98,6 @@ for step, seq in enumerate(demo_sequences):
                 entropy_img = cv2.applyColorMap(entropy_img, cv2.COLORMAP_HOT)
                 cv2.imwrite(output_path_seq + "/" + name[i] + "_entropy.png", entropy_img)
 
-                average_entropy_img = average_entropy[i]
-                average_entropy_img = (average_entropy_img/max_entropy)*255
-                average_entropy_img = average_entropy_img.astype(np.uint8)
-                average_entropy_img = cv2.applyColorMap(average_entropy_img, cv2.COLORMAP_HOT)
-                cv2.imwrite(output_path_seq + "/" + name[i] + "_average_entropy.png", average_entropy_img)
-
-                diff_entropy_img = entropy[i] - average_entropy[i]
-                diff_entropy_img = (diff_entropy_img/max_entropy)*255
-                diff_entropy_img = diff_entropy_img.astype(np.uint8)
-                diff_entropy_img = cv2.applyColorMap(diff_entropy_img, cv2.COLORMAP_HOT)
-                cv2.imwrite(output_path_seq + "/" + name[i] + "_diff_entropy.png", diff_entropy_img)
-
                 names.append(name[i])
 
             # # # # # # # # # # # # # # # # # # debug START:
@@ -129,7 +108,7 @@ for step, seq in enumerate(demo_sequences):
     # (names contains "stuttgart_00_000000_000030", "stuttgart_00_000000_000031" etc.)
     names_sorted = sorted(names)
 
-    out = cv2.VideoWriter("%s/%s.avi" % (output_path_seq, seq), cv2.VideoWriter_fourcc(*"MJPG"), 20, (2*w, 3*h))
+    out = cv2.VideoWriter("%s/%s.avi" % (output_path_seq, seq), cv2.VideoWriter_fourcc(*"MJPG"), 20, (2*w, 2*h))
     for step, name in enumerate(names_sorted):
         if step % 10 == 0:
             print ("step: %d/%d" % (step+1, len(names_sorted)))
@@ -137,22 +116,12 @@ for step, seq in enumerate(demo_sequences):
         img = cv2.imread(output_path_seq + "/" + name + "_img.png", -1)
         pred_overlayed = cv2.imread(output_path_seq + "/" + name + "_pred_overlayed.png", -1)
         entropy = cv2.imread(output_path_seq + "/" + name + "_entropy.png", -1)
-        average_entropy = cv2.imread(output_path_seq + "/" + name + "_average_entropy.png", -1)
-        diff_entropy = cv2.imread(output_path_seq + "/" + name + "_diff_entropy.png", -1)
 
-        # combined_img = np.zeros((2*h, 2*w, 3), dtype=np.uint8)
-        #
-        # combined_img[0:h, int(0.5*w):int(1.5*w)] = img
-        # combined_img[h:2*h, 0:w] = pred_overlayed
-        # combined_img[h:2*h, w:2*w] = entropy
+        combined_img = np.zeros((2*h, 2*w, 3), dtype=np.uint8)
 
-        combined_img = np.zeros((3*h, 2*w, 3), dtype=np.uint8)
-
-        combined_img[0:h, 0:w] = img
-        combined_img[0:h, w:2*w] = pred_overlayed
-        combined_img[h:2*h, int(0.5*w):int(1.5*w)] = entropy
-        combined_img[2*h:3*h, 0:w] = average_entropy
-        combined_img[2*h:3*h, w:2*w] = diff_entropy
+        combined_img[0:h, int(0.5*w):int(1.5*w)] = img
+        combined_img[h:2*h, 0:w] = pred_overlayed
+        combined_img[h:2*h, w:2*w] = entropy
 
         out.write(combined_img)
 
