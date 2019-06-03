@@ -302,17 +302,17 @@ $ /root/miniconda3/bin/python evaluating_bdl/segmentation/ensembling_train_syn.p
 
 
 
-- _mcdropout_train.py_: (x) 
+- _mcdropout_train.py_: Code for training M _model_mcdropout.py_ models, on Cityscapes train.
 - _mcdropout_train_syn.py_: As above, but on Synscapes train.
 
-- _mcdropout_eval.py_: (x)
+- _mcdropout_eval.py_: Computes the mIoU for a trained MC-dropout model with M forward passes, on Cityscapes val. Also creates visualization images of the input image, ground truth, prediction and the estimated uncertainty. 
 - _mcdropout_eval_syn.py_: As above, but on Synscapes val.
 
-- _mcdropout_eval_ause_ece.py_: (x)
+- _mcdropout_eval_ause_ece.py_: Computes the AUSE (mean +- std) and ECE (mean +- std) for M = [1, 2, 4, 8, 16] forward passes on Cityscapes val, based on a total of 8 trained MC-dropout models. Also creates sparsification plots, sparsification error curves and reliability diagrams.
 - _mcdropout_eval_ause_ece_syn.py_: As above, but on Synscapes val.
 
-- _mcdropout_eval_seq.py_: FIXA!
-- _mcdropout_eval_seq_syn.py_: FIXA!
+- _mcdropout_eval_seq.py_: Creates visualization videos (input image, prediction and the estimated uncertainty) for a trained MC-dropout model with M forward passes, on the three demo sequences in Cityscapes.
+- _mcdropout_eval_seq_syn.py_: Creates a visualization video (input image, ground truth, prediction and the estimated uncertainty) for a trained MC-dropout model with M forward passes, showing the 30 first images in Synscapes val.
 ***
 ***
 ***
