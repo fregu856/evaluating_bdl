@@ -1,8 +1,8 @@
 # evaluating_bdl
 
-This repository contains the official implementation (PyTorch) of the paper [Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision](), 2019.
-
 ![overview image](evaluating_bdl_.png)
+
+This repository contains the official implementation (PyTorch) of the paper [Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision](), 2019.
 
 Blabla, video, description / short abstract, bibtex....TODO! TODO!
 
