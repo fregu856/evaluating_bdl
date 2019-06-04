@@ -13,7 +13,7 @@ We propose an evaluation framework for predictive uncertainty estimation that is
 
 If you find this work useful, please consider citing:
 ```
-TODO! TODO! TODO!
+Coming soon
 ```
 
 
