@@ -421,7 +421,7 @@ $ python evaluating_bdl/toyRegression/Ensemble-Adam/train.py
 - - - _datasets.py_: Definition of the training dataset.
 - - - _model.py_: Definition of the feed-forward neural network.
 - - - _train.py_: Code for training M models.
-- - - _eval.py_: Creates a plot of the obtained predicitve distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
+- - - _eval.py_: Creates a plot of the obtained predictive distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
 - - - _eval_plots.py_: Creates plots of the obtained predictive distributions for different values of M.
 - - - _eval_kl_div.py_: Computes the KL divergence between the obtained predictive distribution and the HMC "ground truth", for different values of M. 
 
@@ -498,7 +498,7 @@ $ python evaluating_bdl/toyClassification/Ensemble-Adam/train.py
 - - - _datasets.py_: Definition of the training dataset.
 - - - _model.py_: Definition of the feed-forward neural network.
 - - - _train.py_: Code for training M models.
-- - - _eval.py_: Creates a plot of the obtained predicitve distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
+- - - _eval.py_: Creates a plot of the obtained predictive distribution and the HMC "ground truth" predictive distribution, for a set value of M. Also creates histograms for the model parameters.
 - - - _eval_plots.py_: Creates plots of the obtained predictive distributions for different values of M.
 - - - _eval_kl_div.py_: Computes the KL divergence between the obtained predictive distribution and the HMC "ground truth", for different values of M. 
 
