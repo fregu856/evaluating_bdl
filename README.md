@@ -13,7 +13,12 @@ We propose an evaluation framework for predictive uncertainty estimation that is
 
 If you find this work useful, please consider citing:
 ```
-Coming soon
+@article{gustafsson2019evaluating,
+  title={Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision},
+  author={Gustafsson, Fredrik K and Danelljan, Martin and Sch{\"o}n, Thomas B},
+  journal={arXiv preprint arXiv:1906.01620},
+  year={2019}
+}
 ```
 
 
