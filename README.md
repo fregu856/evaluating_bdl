@@ -13,11 +13,12 @@ We propose a comprehensive evaluation framework for scalable epistemic uncertain
 
 If you find this work useful, please consider citing:
 ```
-@article{gustafsson2019evaluating,
-  title={Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision},
+@InProceedings{gustafsson2020evaluating,
   author={Gustafsson, Fredrik K and Danelljan, Martin and Sch{\"o}n, Thomas B},
-  journal={arXiv preprint arXiv:1906.01620},
-  year={2019}
+  title={Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month = {June},
+  year = {2020}
 }
 ```
 
